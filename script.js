@@ -54,7 +54,14 @@
     });
   });
 
-  // Registration form -> Google Sheets via Apps Script webhook
+  // Create hidden iframe for form submission (bypasses CORS)
+  var hiddenIframe = document.createElement('iframe');
+  hiddenIframe.name = 'hidden_iframe';
+  hiddenIframe.id = 'hidden_iframe';
+  hiddenIframe.style.display = 'none';
+  document.body.appendChild(hiddenIframe);
+
+  // Registration form -> Google Sheets via hidden iframe form post
   var WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwtbx0BCUuix9vDz_ygGtktAjzyG4_QDvmKMsnQB59YifezHWm0XgRFEb1QD9lpLh0r9g/exec';
   var regBtn = document.getElementById('submitRegistration');
   if (regBtn) {
@@ -71,7 +78,17 @@
       }
 
       var question = (document.getElementById('regQuestion').value || '').trim();
-      var data = {
+
+      regBtn.disabled = true;
+      regBtn.textContent = 'Submitting...';
+
+      // Build a hidden form and submit via iframe to bypass CORS
+      var form = document.createElement('form');
+      form.method = 'POST';
+      form.action = WEBHOOK_URL;
+      form.target = 'hidden_iframe';
+
+      var fields = {
         name: name,
         college: college,
         year: year,
@@ -80,26 +97,24 @@
         question: question
       };
 
-      // Disable button, show "Submitting..."
-      regBtn.disabled = true;
-      regBtn.textContent = 'Submitting...';
+      Object.keys(fields).forEach(function(key){
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = fields[key];
+        form.appendChild(input);
+      });
 
-      // POST to Google Sheets webhook (no-cors: we can't read response, but data goes through)
-      fetch(WEBHOOK_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(data)
-      }).then(function() {
-        // Show success message, hide form
+      document.body.appendChild(form);
+      form.submit();
+
+      // Show success after delay (iframe cross-origin load is opaque)
+      setTimeout(function() {
+        document.body.removeChild(form);
         var formEl = document.getElementById('regForm');
         var successEl = document.getElementById('regSuccess');
         if (formEl) formEl.style.display = 'none';
         if (successEl) successEl.style.display = 'block';
-      }).catch(function(err) {
-        regBtn.disabled = false;
-        regBtn.textContent = 'Submit Registration \u2192';
-        alert('Something went wrong. Please try again, or WhatsApp us at +91 86860 84844.');
-      });
+      }, 2500);
     });
   }
