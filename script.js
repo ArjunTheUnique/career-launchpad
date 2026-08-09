@@ -54,17 +54,29 @@
     });
   });
 
-  // Registration form -> WhatsApp
-  document.getElementById('regForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = document.getElementById('regName').value;
-    var college = document.getElementById('regCollege').value;
-    var year = document.getElementById('regYear').value;
-    var branch = document.getElementById('regBranch').value;
-    var question = document.getElementById('regQuestion').value;
-    var msg = 'C3 Workshop Registration\n\nName: ' + name + '\nCollege: ' + college + '\nYear: ' + year + '\nBranch: ' + branch;
-    if(question) msg += '\nQuestion: ' + question;
-    msg += '\n\nI have attached my payment screenshot.';
-    var url = 'https://wa.me/918686084844?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank');
-  });
+  // Registration form -> WhatsApp (click handler, not form submit)
+  var waBtn = document.getElementById('sendWhatsApp');
+  if (waBtn) {
+    waBtn.addEventListener('click', function(){
+      var name = (document.getElementById('regName').value || '').trim();
+      var college = (document.getElementById('regCollege').value || '').trim();
+      var year = document.getElementById('regYear').value;
+      var branch = (document.getElementById('regBranch').value || '').trim();
+
+      if(!name || !college || !year || !branch){
+        alert('Please fill in your name, college, year, and branch before sending.');
+        return;
+      }
+
+      var question = (document.getElementById('regQuestion').value || '').trim();
+      var msg = 'C3 Workshop Registration\n\n' +
+        'Name: ' + name + '\n' +
+        'College: ' + college + '\n' +
+        'Year: ' + year + '\n' +
+        'Branch: ' + branch;
+      if(question) msg += '\nQuestion: ' + question;
+      msg += '\n\nI have attached my payment screenshot.';
+      var url = 'https://wa.me/918686084844?text=' + encodeURIComponent(msg);
+      window.open(url, '_blank');
+    });
+  }
