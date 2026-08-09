@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>C3 — Competent Career Crafting | Workshop & 5-Week Program</title>
-<meta name="description" content="₹250 workshop on 23 August. A 90-minute taste of the C3 career clarity program for engineering students. Led by an ex-Siemens engineer. Reflect, research, test your way to a real direction.">
+<meta name="description" content="₹250 workshop on 23 August. 90 minutes of real career-design tools for engineering students. Led by an ex-Siemens engineer.">
 <meta property="og:title" content="C3 — Competent Career Crafting">
 <meta property="og:description" content="A ₹250 workshop on 23 August. Reflect, research, test — build a career direction you actually trust.">
 <meta property="og:type" content="website">
@@ -13,498 +13,382 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<style>
+:root{--paper:#F2F6ED;--card:#FCFCF8;--ink:#1D2A24;--ink-soft:#51625A;--ink-faint:#8A9A8F;--rust:#C14A1F;--rust-dark:#9C3B16;--blue:#2C4A5C;--line:#C9D6BF;--line-soft:#DCE6D3;--maxw:1100px;--radius:4px;--fd:'Big Shoulders Display',sans-serif;--fb:'IBM Plex Sans',sans-serif;--fm:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{font-family:var(--fd);text-transform:uppercase;line-height:0.95;margin:0;letter-spacing:0.01em}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-block;font-family:var(--fm);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;padding:13px 20px;border-radius:var(--radius);border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:var(--rust);color:var(--card)}
+.btn--primary:hover{background:var(--rust-dark)}
+.btn--ghost{border-color:var(--ink);color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn--on-dark{border-color:rgba(255,255,255,0.2);color:var(--paper)}
+.btn--on-dark:hover{background:var(--paper);color:var(--ink)}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hdr{position:sticky;top:0;z-index:50;background:rgba(242,246,237,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hdr-in{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--fd);font-weight:900;font-size:24px;color:var(--ink)}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-family:var(--fm);font-size:12px;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-soft)}
+.nav a:hover{color:var(--rust)}
+.nav .cta{color:var(--card);background:var(--rust);padding:8px 14px;border-radius:var(--radius)}
+.nav .cta:hover{background:var(--rust-dark)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:8px;cursor:pointer}
+.burger span{width:22px;height:2px;background:var(--ink)}
+.hero{position:relative;overflow:hidden;padding:64px 0 48px;background:var(--paper);background-image:linear-gradient(rgba(201,214,191,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(201,214,191,0.4) 1px,transparent 1px);background-size:36px 36px}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,64px)}
+.hero h1 em{font-style:normal;color:var(--rust)}
+.hero p.sub{max-width:50ch;font-size:16px;color:var(--ink-soft);margin:18px 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{font-family:var(--fm);font-size:11px;padding:6px 10px;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink-soft);background:var(--card)}
+.hero-vis{position:relative}
+.stamp{position:absolute;top:-8px;right:0;z-index:2;border:2px solid var(--rust);border-radius:var(--radius);padding:10px 16px;text-align:center;transform:rotate(3deg);background:var(--card);box-shadow:0 2px 12px rgba(29,42,36,0.08)}
+.stamp .p{font-family:var(--fd);font-size:28px;font-weight:900;color:var(--rust);line-height:1}
+.stamp .d{font-family:var(--fm);font-size:9px;letter-spacing:0.08em;color:var(--ink-soft);text-transform:uppercase;margin-top:3px}
+svg .arc{stroke:var(--rust)}
+svg .nd circle{fill:var(--card);stroke:var(--blue);stroke-width:2}
+svg .nd .wk{fill:var(--rust);font-family:var(--fm);font-weight:600;font-size:10px}
+svg .nd .wn{fill:var(--blue);font-family:var(--fm);font-weight:500;font-size:9.5px;letter-spacing:0.06em}
+.cap{text-align:center;font-family:var(--fm);font-size:11px;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;letter-spacing:0.08em}
+.section{padding:56px 0}
+.section.deep{background:#E7EEDD}
+.head{max-width:600px;margin-bottom:32px}
+.head h2{font-size:clamp(26px,3.2vw,40px)}
+.head p{color:var(--ink-soft);margin-top:10px;font-size:15px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--rust);border-radius:var(--radius);padding:20px}
+.card .t{font-family:var(--fm);font-size:10.5px;letter-spacing:0.1em;color:var(--blue);text-transform:uppercase}
+.card h3{font-family:var(--fd);text-transform:none;font-weight:700;font-size:18px;margin:8px 0}
+.card p{color:var(--ink-soft);font-size:14px}
+.wmeta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.mc{font-family:var(--fm);font-size:11.5px;padding:7px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.mc b{color:var(--rust)}
+.wcards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;border-top:3px solid var(--rust)}
+.wc+.wc{border-top-color:var(--blue)}
+.wc h3{font-family:var(--fd);text-transform:none;font-weight:700;font-size:16px;margin-bottom:10px}
+.wc ul{display:flex;flex-direction:column;gap:6px}
+.wc li{color:var(--ink-soft);font-size:13.5px;padding-left:14px;position:relative}
+.wc li::before{content:"\2192";position:absolute;left:0;color:var(--rust)}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.steps{display:flex;flex-direction:column;gap:14px;margin-bottom:18px}
+.st{display:flex;gap:12px;align-items:flex-start}
+.st .n{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--rust);color:var(--card);font-family:var(--fm);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.st .tx{font-size:13.5px;color:var(--ink-soft);line-height:1.45}
+.st .tx b{color:var(--ink)}
+.qr{text-align:center}
+.qr img{border:1px solid var(--line);border-radius:var(--radius);padding:6px;background:var(--card);display:inline-block}
+.price{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);overflow:hidden;margin-bottom:18px}
+.price-h{background:var(--ink);color:var(--paper);padding:18px 22px}
+.price-h .eyebrow{color:#E8A688;margin-bottom:6px}
+.price-amt{font-family:var(--fd);font-size:36px;font-weight:900;color:var(--paper);line-height:1}
+.price-amt span{font-size:14px;font-weight:400;color:var(--ink-faint);font-family:var(--fm)}
+.price-b{padding:16px 22px}
+.price-b p{color:var(--ink-soft);font-size:13.5px}
+.price-b b{color:var(--ink)}
+form.reg{display:flex;flex-direction:column;gap:12px}
+form.reg label{font-family:var(--fm);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rust);display:block;margin-bottom:5px}
+form.reg input,form.reg select,form.reg textarea{font-family:var(--fb);font-size:14px;padding:11px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);color:var(--ink);width:100%}
+form.reg input:focus,form.reg select:focus,form.reg textarea:focus{outline:none;border-color:var(--rust)}
+form.reg textarea{resize:vertical;min-height:50px}
+.ok{display:none;padding:22px;border:1px solid var(--rust);border-radius:var(--radius);background:var(--card);text-align:center}
+.ok h3{font-family:var(--fd);font-size:20px;color:var(--rust);margin-bottom:6px}
+.ok p{color:var(--ink-soft);font-size:14px}
+.ok .small{color:var(--ink-faint);font-size:12px;margin-top:10px;font-family:var(--fm)}
+.weeks{display:flex;flex-direction:column;gap:0}
+.wk{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.wk:last-of-type{border-bottom:1px solid var(--line)}
+.wk .tag{font-family:var(--fm)}
+.wk .tag .n{display:block;font-size:12px;color:var(--rust);font-weight:600;letter-spacing:0.06em}
+.wk .tag .v{display:block;font-family:var(--fd);text-transform:uppercase;font-size:22px;color:var(--ink);line-height:1;margin-top:4px}
+.wk ul{display:flex;flex-direction:column;gap:6px}
+.wk li{color:var(--ink-soft);font-size:14px;padding-left:14px;position:relative}
+.wk li::before{content:"\2014";position:absolute;left:0;color:var(--ink-faint)}
+.incl{margin-top:32px;padding:22px;border:1px solid var(--line);background:var(--card);border-radius:var(--radius);display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.incl .it .t{font-family:var(--fm);font-size:10px;color:var(--rust);text-transform:uppercase;display:block;margin-bottom:4px;letter-spacing:0.08em}
+.incl .it p{color:var(--ink);font-size:13px}
+.fac{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.fac h2{font-size:clamp(24px,3vw,36px);text-transform:none}
+.fac .role{color:var(--ink-soft);font-size:14px;margin-top:6px}
+.spec{border:1px solid var(--line);background:var(--card);border-radius:var(--radius);overflow:hidden}
+.sr{display:grid;grid-template-columns:140px 1fr;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line-soft)}
+.sr:last-child{border-bottom:none}
+.sr dt{font-family:var(--fm);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--rust)}
+.sr dd{margin:0;font-size:13.5px;color:var(--ink)}
+.contact{background:var(--ink);color:var(--paper);padding:56px 0}
+.contact .eyebrow{color:#E8A688}
+.contact h2{color:var(--paper);font-size:clamp(26px,3.4vw,42px)}
+.contact p.lead{color:var(--line-soft);font-size:16px;max-width:52ch;margin:12px 0 24px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.cc{border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius);padding:16px 18px}
+.cc .eyebrow{color:rgba(255,255,255,0.5)}
+.cc a{font-family:var(--fm);font-size:14px;color:var(--paper)}
+.cc a:hover{color:var(--rust)}
+footer{background:#161F1B;color:var(--ink-faint);padding:20px 0}
+.ft{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--fm);font-size:11px}
+@media(max-width:768px){
+  .nav{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-vis{display:none}
+  .cards3{grid-template-columns:1fr}
+  .wcards{grid-template-columns:1fr}
+  .reg-grid{grid-template-columns:1fr}
+  .incl{grid-template-columns:1fr 1fr}
+  .fac{grid-template-columns:1fr}
+  .sr{grid-template-columns:1fr;gap:2px}
+  .cgrid{grid-template-columns:1fr}
+  .wk{grid-template-columns:1fr;gap:6px}
+  .section{padding:40px 0}
+  .hero{padding:48px 0 32px}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="nav-inner">
-    <a href="#home" class="logo">
-      <span class="logo-mark">C3</span>
-      <span class="logo-sub">Competent Career Crafting</span>
-    </a>
-    <nav class="nav-links" id="navLinks">
+<header class="hdr">
+  <div class="hdr-in">
+    <span class="logo">C3</span>
+    <nav class="nav" id="nav">
       <a href="#workshop">Workshop</a>
       <a href="#program">Program</a>
       <a href="#facilitator">About</a>
-      <a href="#faq">FAQ</a>
-      <a href="#register" class="nav-cta">Register &nbsp;&#8377;&nbsp;250</a>
+      <a href="#register" class="cta">Register</a>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main>
-
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <span class="crop crop--tl" aria-hidden="true"></span>
-    <span class="crop crop--tr" aria-hidden="true"></span>
-    <div class="container hero-grid">
-      <div class="reveal is-visible">
-        <span class="eyebrow">[ &#8377;&nbsp;250 Workshop &middot; 23 August &middot; Google Meet ]</span>
-        <h1>Stop guessing.<br>Start <em>prototyping</em><br>your career.</h1>
-        <p class="hero-sub">Most students graduate with a placement, not a plan. Start with a &#8377;250 workshop &mdash; 90 minutes that give you real career-design tools, not a sales pitch. Like what you see? The full 5-week program takes you from vague to specific.</p>
-        <div class="tag-row">
-          <span class="tag-chip">How do I secure a fulfilling career?</span>
-          <span class="tag-chip">What am I actually competent at?</span>
-          <span class="tag-chip">Which tools should I go deep on?</span>
-        </div>
-        <div class="btn-row">
-          <a href="#register" class="btn btn--primary">Register for &#8377;&nbsp;250 &rarr;</a>
-          <a href="#workshop" class="btn btn--ghost">What's in the workshop?</a>
-        </div>
-        <p class="hero-meta">SUNDAY, 23 AUGUST &middot; 9:00&ndash;10:30 AM IST &middot; GOOGLE MEET &middot; EX-SIEMENS ENGINEER</p>
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">[ 23 August &middot; 9:00 AM IST &middot; Google Meet ]</span>
+      <h1>Stop guessing.<br>Start <em>prototyping</em><br>your career.</h1>
+      <p class="sub">Most students graduate with a placement, not a plan. This 90-minute workshop gives you real career-design tools — not a sales pitch. Like it? The full 5-week program takes you from vague to specific.</p>
+      <div class="chips">
+        <span class="chip">What am I competent at?</span>
+        <span class="chip">Which tools should I learn?</span>
+        <span class="chip">How do I find my direction?</span>
       </div>
-      <div class="hero-visual">
-        <div class="workshop-stamp">
-          <div class="stamp-price">&#8377;&nbsp;250</div>
-          <div class="stamp-date">23 AUG &middot; 9 AM</div>
-        </div>
-        <div class="cycle-wrap">
-          <svg viewBox="0 0 500 300" role="img" aria-label="The five-week action cycle: Reflect, Synthesize, Investigate, Test, Evaluate" style="width:100%;height:auto;">
-            <defs>
-              <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r="1" fill="var(--line)" opacity="0.6"></circle>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="500" height="300" fill="url(#dotgrid)"></rect>
-            <path id="cycleArc" d="M70,240 A180,180 0 0 1 430,240" fill="none" stroke-width="2.5" stroke-linecap="round"></path>
-            <g class="node">
-              <circle cx="70" cy="240" r="9"></circle>
-              <text x="70" y="266" text-anchor="middle" class="wk">WK.01</text>
-              <text x="70" y="280" text-anchor="middle" class="wk-name">REFLECT</text>
-            </g>
-            <g class="node">
-              <circle cx="122.7" cy="112.7" r="9"></circle>
-              <text x="122.7" y="78.7" text-anchor="middle" class="wk">WK.02</text>
-              <text x="122.7" y="92.7" text-anchor="middle" class="wk-name">SYNTHESIZE</text>
-            </g>
-            <g class="node">
-              <circle cx="250" cy="60" r="9"></circle>
-              <text x="250" y="26" text-anchor="middle" class="wk">WK.03</text>
-              <text x="250" y="40" text-anchor="middle" class="wk-name">INVESTIGATE</text>
-            </g>
-            <g class="node">
-              <circle cx="377.3" cy="112.7" r="9"></circle>
-              <text x="377.3" y="78.7" text-anchor="middle" class="wk">WK.04</text>
-              <text x="377.3" y="92.7" text-anchor="middle" class="wk-name">TEST</text>
-            </g>
-            <g class="node">
-              <circle cx="430" cy="240" r="9"></circle>
-              <text x="430" y="266" text-anchor="middle" class="wk">WK.05</text>
-              <text x="430" y="280" text-anchor="middle" class="wk-name">EVALUATE</text>
-            </g>
-          </svg>
-          <p class="cycle-caption">The Action Cycle &mdash; one loop, five weeks</p>
-        </div>
+      <div class="row">
+        <a href="#register" class="btn btn--primary">Register &rarr;</a>
+        <a href="#workshop" class="btn btn--ghost">What's in it?</a>
       </div>
     </div>
-  </section>
-
-  <!-- WHY -->
-  <section id="why" class="band tone-deep">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ Why Now ]</span>
-        <h2>The old playbook is running out of runway</h2>
-        <p>Placement volume and salary packages used to be the whole scorecard. They still matter &mdash; but they hide a harder truth: most graduates don't know what they're good at, or what they care about. And the market they're walking into looks nothing like the one the curriculum was built for.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <span class="tag">Automation</span>
-          <h3>The bar keeps moving</h3>
-          <p>As AI takes over repetitive work, basic and generic skills are worth less every year. Specialised, adaptable skills are worth more &mdash; and that gap is widening fast.</p>
-        </div>
-        <div class="why-card reveal">
-          <span class="tag">Competition</span>
-          <h3>Entry-level got harder</h3>
-          <p>Recruiters now expect real, demonstrable ability from day one, not just a transcript. Academic knowledge alone no longer clears the bar it used to.</p>
-        </div>
-        <div class="why-card reveal">
-          <span class="tag">Initiative</span>
-          <h3>Ownership is the differentiator</h3>
-          <p>Employers are backing self-driven people who take ownership and build context-specific work &mdash; not people who are simply present.</p>
-        </div>
-      </div>
+    <div class="hero-vis">
+      <div class="stamp"><div class="p">&#8377;&nbsp;250</div><div class="d">23 AUG &middot; 9 AM</div></div>
+      <svg viewBox="0 0 500 280" style="width:100%;height:auto" role="img" aria-label="Five-week action cycle">
+        <path class="arc" d="M70,220 A170,170 0 0 1 430,220" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+        <g class="nd"><circle cx="70" cy="220" r="8"/><text x="70" y="244" text-anchor="middle" class="wk">WK.01</text><text x="70" y="258" text-anchor="middle" class="wn">REFLECT</text></g>
+        <g class="nd"><circle cx="122" cy="102" r="8"/><text x="122" y="72" text-anchor="middle" class="wk">WK.02</text><text x="122" y="86" text-anchor="middle" class="wn">SYNTHESIZE</text></g>
+        <g class="nd"><circle cx="250" cy="55" r="8"/><text x="250" y="25" text-anchor="middle" class="wk">WK.03</text><text x="250" y="39" text-anchor="middle" class="wn">INVESTIGATE</text></g>
+        <g class="nd"><circle cx="378" cy="102" r="8"/><text x="378" y="72" text-anchor="middle" class="wk">WK.04</text><text x="378" y="86" text-anchor="middle" class="wn">TEST</text></g>
+        <g class="nd"><circle cx="430" cy="220" r="8"/><text x="430" y="244" text-anchor="middle" class="wk">WK.05</text><text x="430" y="258" text-anchor="middle" class="wn">EVALUATE</text></g>
+      </svg>
+      <p class="cap">The Action Cycle — one loop, five weeks</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- WORKSHOP -->
-  <section id="workshop" class="band">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ The Workshop &middot; 23 August ]</span>
-        <h2>90 minutes. Real tools. Not a sales pitch.</h2>
-        <p>The &#8377;250 workshop is a paid demo of the full 5-week program. You'll work through actual exercises from Week 1 &mdash; not a slideshow of promises. By the end, you'll know whether C3 is right for you.</p>
-      </div>
-      <div class="workshop-grid">
-        <div class="reveal">
-          <div class="workshop-meta">
-            <span class="meta-chip"><strong>Date:</strong> Sun, 23 Aug</span>
-            <span class="meta-chip"><strong>Time:</strong> 9:00&ndash;10:30 AM IST</span>
-            <span class="meta-chip"><strong>Where:</strong> Google Meet</span>
-            <span class="meta-chip"><strong>Fee:</strong> &#8377;&nbsp;250</span>
-          </div>
-          <div class="btn-row" style="margin-top:10px;">
-            <a href="#register" class="btn btn--primary">Register for &#8377;&nbsp;250 &rarr;</a>
-            <a href="#program" class="btn btn--ghost">See the full 5-week program</a>
-          </div>
-        </div>
-        <div class="reveal">
-          <div class="ws-card">
-            <h3>What happens in 90 minutes</h3>
-            <ul>
-              <li>Introduction to the C3 methodology &mdash; what it is, why it works</li>
-              <li>Holland Codes assessment &mdash; find your top 3 traits, live</li>
-              <li>AEIOU method &mdash; break down your best experiences into skills</li>
-              <li>Preview of the full 5-week program &mdash; see the complete cycle</li>
-              <li>Live Q&A with Nagarjuna</li>
-              <li>Enrollment details for the full program</li>
-            </ul>
-          </div>
-          <div class="ws-card">
-            <h3>What you walk away with</h3>
-            <ul>
-              <li>Your top 3 Holland Code traits &mdash; identified live</li>
-              <li>A started AEIOU map of your experiences</li>
-              <li>Clear picture of what the 5-week program offers</li>
-              <li>A real answer to whether C3 is the right fit for you</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<section id="why" class="section deep">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">[ Why Now ]</span>
+      <h2>The old playbook is running out of runway</h2>
+      <p>Placement packages used to be the whole scorecard. They still matter — but most graduates don't know what they're good at. And the market they're walking into looks nothing like the one the curriculum was built for.</p>
     </div>
-  </section>
-
-  <!-- REGISTER -->
-  <section id="register" class="band tone-deep">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ Save Your Seat ]</span>
-        <h2>Pay. Fill the form. Done.</h2>
-        <p>Step 1: Pay &#8377;250 via UPI. Step 2: Fill the form below with your payment screenshot. We'll send the Google Meet link to your email.</p>
-      </div>
-      <div class="register-grid">
-        <div class="reveal">
-          <div class="pay-steps">
-            <div class="pay-step">
-              <div class="step-num">1</div>
-              <div class="step-text"><strong>Pay &#8377;&nbsp;250 via UPI.</strong> Tap the Pay Now button or scan the QR. UPI ID: <strong>8686084844@ybl</strong> (Nagarjuna ASV).</div>
-            </div>
-            <div class="pay-step">
-              <div class="step-num">2</div>
-              <div class="step-text"><strong>Screenshot the payment.</strong> Take a screenshot of your successful transaction &mdash; you'll need to reference it.</div>
-            </div>
-            <div class="pay-step">
-              <div class="step-num">3</div>
-              <div class="step-text"><strong>Fill the form &rarr;</strong> Enter your details in the form on the right. We'll confirm your seat and send the Google Meet link to your email.</div>
-            </div>
-          </div>
-          <div class="qr-box">
-            <a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop%20Registration" class="btn btn--primary" style="width:100%; justify-content:center; margin-bottom:14px;">Pay &#8377;&nbsp;250 Now &rarr;</a>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&bgcolor=ffffff&color=1D2A24&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%2BASV%26am%3D250%26cu%3DINR%26tn%3DC3%2BWorkshop%2BRegistration" alt="UPI QR code for &#8377;250 C3 workshop registration" width="180" height="180">
-            <p class="cycle-caption">Or scan the QR to pay &#8377;&nbsp;250</p>
-          </div>
-        </div>
-        <div class="reveal">
-          <div class="price-card">
-            <div class="price-head">
-              <span class="eyebrow">Workshop Fee</span>
-              <div class="price-amount">&#8377;&nbsp;250 <span>/ 90 minutes</span></div>
-            </div>
-            <div class="price-body">
-              <p style="color:var(--ink-soft); font-size:14.5px; margin:0;">
-                <strong style="color:var(--ink);">Sun, 23 August &middot; 9:00&ndash;10:30 AM IST</strong><br>
-                Google Meet &middot; Link sent to your email after registration
-              </p>
-            </div>
-          </div>
-          <form class="reg-form" id="regForm">
-            <div>
-              <label for="regName">Name</label>
-              <input type="text" id="regName" name="name" placeholder="Your full name">
-            </div>
-            <div>
-              <label for="regEmail">Email</label>
-              <input type="email" id="regEmail" name="email" placeholder="We'll send the Meet link here">
-            </div>
-            <div>
-              <label for="regCollege">College</label>
-              <input type="text" id="regCollege" name="college" placeholder="Your college name">
-            </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-              <div>
-                <label for="regYear">Year</label>
-                <select id="regYear" name="year">
-                  <option value="">Select year</option>
-                  <option value="1st Year">1st Year</option>
-                  <option value="2nd Year">2nd Year</option>
-                  <option value="3rd Year">3rd Year</option>
-                  <option value="4th Year">4th Year</option>
-                  <option value="Graduate">Graduate</option>
-                </select>
-              </div>
-              <div>
-                <label for="regBranch">Branch</label>
-                <input type="text" id="regBranch" name="branch" placeholder="e.g. Mechanical">
-              </div>
-            </div>
-            <div>
-              <label for="regQuestion">Question for Nagarjuna? (optional)</label>
-              <textarea id="regQuestion" name="question" placeholder="Anything you'd like addressed in the workshop"></textarea>
-            </div>
-            <button type="button" id="submitRegistration" class="btn btn--primary" style="width:100%; justify-content:center;">Submit Registration &rarr;</button>
-          </form>
-          <div id="regSuccess" style="display:none; padding:24px; border:1px solid var(--rust); border-radius:var(--radius); background:var(--card); text-align:center;">
-            <p style="font-family:var(--font-display); font-size:22px; color:var(--rust); margin-bottom:8px;">Registration Received!</p>
-            <p style="color:var(--ink-soft); font-size:15px;">We've got your details. The Google Meet link will be sent to your email before the workshop. See you on 23 August at 9:00 AM IST.</p>
-            <p style="color:var(--ink-faint); font-size:13px; margin-top:12px; font-family:var(--font-mono);">If you haven't paid yet, pay &#8377;250 to 8686084844@ybl via UPI.</p>
-          </div>
-          <p class="cycle-caption" style="margin-top:12px;">Your details go straight to our registration sheet</p>
-        </div>
-      </div>
+    <div class="cards3">
+      <div class="card"><span class="t">Automation</span><h3>The bar keeps moving</h3><p>AI takes over repetitive work. Generic skills are worth less every year; specialised, adaptable skills are worth more.</p></div>
+      <div class="card"><span class="t">Competition</span><h3>Entry-level got harder</h3><p>Recruiters expect demonstrable ability from day one — not just a transcript. Academic knowledge alone doesn't clear the bar.</p></div>
+      <div class="card"><span class="t">Initiative</span><h3>Ownership wins</h3><p>Employers back self-driven people who build real things — not people who are simply present.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- OUTCOMES -->
-  <section id="outcomes" class="band">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ What You Leave With ]</span>
-        <h2>By week 5, you'll be able to</h2>
-      </div>
-      <ul class="outcomes-list reveal">
-        <li><span class="check" aria-hidden="true"></span><p>Name your core interests, strengths, and transferable skills &mdash; specifically, not vaguely.</p></li>
-        <li><span class="check" aria-hidden="true"></span><p>Point to the career domains and work environments that actually fit how you work.</p></li>
-        <li><span class="check" aria-hidden="true"></span><p>Hold a real conversation with a working professional, and know what to ask.</p></li>
-        <li><span class="check" aria-hidden="true"></span><p>Design and run a small project using the tools your target industry actually uses.</p></li>
-        <li><span class="check" aria-hidden="true"></span><p>Walk out with a 4&ndash;6 month roadmap you wrote yourself, with clarity and confidence.</p></li>
-        <li><span class="check" aria-hidden="true"></span><p>Use AI tools to accelerate your career research, not replace your thinking.</p></li>
-      </ul>
+<section id="workshop" class="section">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">[ The Workshop ]</span>
+      <h2>90 minutes. Real tools. Not a sales pitch.</h2>
     </div>
-  </section>
-
-  <!-- PROGRAM -->
-  <section id="program" class="band program">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ The 5-Week Cycle ]</span>
-        <h2>One action cycle. Five weeks. Zero analysis-paralysis.</h2>
-        <p>C3 runs on a simple loop: Reflect &rarr; Synthesize &rarr; Investigate &rarr; Test &rarr; Evaluate. Each week you complete one stage and move a step closer to a plan you actually trust.</p>
-      </div>
-      <div class="week-list">
-        <div class="week reveal">
-          <div class="week-tag"><span class="wk-num">WK.01 &middot; REFLECT</span><span class="wk-verb">Mapping the Core</span></div>
-          <div class="week-body">
-            <ul>
-              <li>Run the Holland Codes assessment to find your top three traits (Realistic, Investigative, Artistic, Social, Enterprising, Conventional) and where they show up in real roles.</li>
-              <li>Break down five of your best past experiences with the AEIOU method &mdash; Activities, Environments, Interactions, Objects, Users &mdash; to surface skills you didn't know you had.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="week reveal">
-          <div class="week-tag"><span class="wk-num">WK.02 &middot; SYNTHESIZE</span><span class="wk-verb">Pattern Mapping</span></div>
-          <div class="week-body">
-            <ul>
-              <li>Cross-check your Holland Codes and AEIOU results to find the patterns that keep repeating.</li>
-              <li>Draft three directions: the Probable Path, the Alternate Path, and the Imaginary Path.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="week reveal">
-          <div class="week-tag"><span class="wk-num">WK.03 &middot; INVESTIGATE</span><span class="wk-verb">Real-World Research</span></div>
-          <div class="week-body">
-            <ul>
-              <li>Learn how to find and approach working professionals in each of your paths.</li>
-              <li>Run structured "prototype conversations" that test your assumptions before you commit years to them.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="week reveal">
-          <div class="week-tag"><span class="wk-num">WK.04 &middot; TEST</span><span class="wk-verb">Tiny Experiments</span></div>
-          <div class="week-body">
-            <ul>
-              <li>Design a small, real project &mdash; a mini-project, an open-source contribution, or a short internship &mdash; using the tools your target industry actually runs on.</li>
-              <li>Track your energy and focus while you work, so the data is about fit, not just output.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="week reveal">
-          <div class="week-tag"><span class="wk-num">WK.05 &middot; EVALUATE</span><span class="wk-verb">Build the Roadmap</span></div>
-          <div class="week-body">
-            <ul>
-              <li>Review five weeks of evidence about your energy, your fit, and your direction.</li>
-              <li>Leave with a written 4&ndash;6 month roadmap &mdash; your next moves, already mapped out.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="program-includes reveal">
-        <span class="eyebrow" style="display:block; margin-bottom:18px;">[ Every Week Of The Full Program Includes ]</span>
-        <div class="includes-grid">
-          <div class="include-item">
-            <span class="tag">Live Session</span>
-            <p>90-minute weekend session on Google Meet</p>
-          </div>
-          <div class="include-item">
-            <span class="tag">Homework</span>
-            <p>Practical assignment to apply between sessions</p>
-          </div>
-          <div class="include-item">
-            <span class="tag">Resources</span>
-            <p>Tools, templates, and curated reading</p>
-          </div>
-          <div class="include-item">
-            <span class="tag">AI Guidance</span>
-            <p>AI-assisted career research support</p>
-          </div>
-        </div>
-      </div>
+    <div class="wmeta">
+      <span class="mc"><b>Date:</b> Sun, 23 Aug</span>
+      <span class="mc"><b>Time:</b> 9:00–10:30 AM IST</span>
+      <span class="mc"><b>Where:</b> Google Meet</span>
+      <span class="mc"><b>Fee:</b> &#8377;250</span>
     </div>
-  </section>
-
-  <!-- METHOD -->
-  <section id="method" class="band tone-deep">
-    <div class="container method-body">
-      <div class="reveal">
-        <span class="eyebrow">[ Where This Comes From ]</span>
-        <h2>Built on research, not vibes</h2>
-        <p style="margin-top:18px;">C3 adapts globally recognised frameworks for the Indian higher-education context: Stanford University's Life Design methodology &mdash; the same lab-tested approach used by 300+ institutions worldwide &mdash; alongside career-transition thinking from Dr. Katharine Brooks and Barbara Sher. It applies the same design-thinking rigor used in technology research and corporate management training to one problem: your career.</p>
-      </div>
-      <div class="refs reveal">
-        <span class="eyebrow">References</span>
+    <div class="wcards">
+      <div class="wc">
+        <h3>What happens in 90 minutes</h3>
         <ul>
-          <li>Life Design Methodology<span>Stanford University &middot; Life Design Lab</span></li>
-          <li>"You Majored in What?"<span>Dr. Katharine Brooks</span></li>
-          <li>"Refuse to Choose"<span>Barbara Sher</span></li>
+          <li>C3 methodology intro — what it is, why it works</li>
+          <li>Holland Codes assessment — find your top 3 traits, live</li>
+          <li>AEIOU method — break down experiences into skills</li>
+          <li>Preview of the full 5-week program + Q&A</li>
+        </ul>
+      </div>
+      <div class="wc">
+        <h3>What you walk away with</h3>
+        <ul>
+          <li>Your top 3 Holland Code traits — identified live</li>
+          <li>A started AEIOU map of your experiences</li>
+          <li>Clear picture of the 5-week program</li>
+          <li>A real answer to whether C3 is right for you</li>
         </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- COMPARE -->
-  <section id="compare" class="band">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ Side By Side ]</span>
-        <h2>What actually changes</h2>
-      </div>
-      <div class="table-wrap reveal">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Metric</th>
-              <th scope="col">Traditional Approach</th>
-              <th scope="col">The C3 Approach</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">Academic Engagement</th><td>Average to low &mdash; little real-world application</td><td>High &mdash; driven by self-selected, real-time inquiry</td></tr>
-            <tr><th scope="row">Student Clarity</th><td>Abstract, generalised, anxious</td><td>Clear, specific, proactive</td></tr>
-            <tr><th scope="row">Knowledge Base</th><td>Mostly theoretical and imagination-based</td><td>Practical, working knowledge tied to competency</td></tr>
-            <tr><th scope="row">Project Initiation</th><td>Faculty-dependent and often repetitive</td><td>Student-led, uniquely researched, real-time</td></tr>
-            <tr><th scope="row">Placement Outcomes</th><td>Dependent on university infrastructure and market</td><td>Strengthened by a demonstrable portfolio and outreach</td></tr>
-          </tbody>
-        </table>
-      </div>
+<section id="register" class="section deep">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">[ Save Your Seat ]</span>
+      <h2>Pay. Fill the form. Done.</h2>
     </div>
-  </section>
-
-  <!-- FACILITATOR -->
-  <section id="facilitator" class="band tone-deep">
-    <div class="container facilitator-grid">
-      <div class="reveal">
-        <span class="eyebrow">[ Who's Running This ]</span>
-        <h2 class="fac-name" style="text-transform:none;">Nagarjuna ASV</h2>
-        <p class="fac-role">Ex-Siemens engineer. NIT Warangal. Ten years mentoring young people across India.</p>
+    <div class="reg-grid">
+      <div>
+        <div class="steps">
+          <div class="st"><div class="n">1</div><div class="tx"><b>Pay &#8377;250 via UPI.</b> Tap the button or scan the QR. UPI ID: <b>8686084844@ybl</b> (Nagarjuna ASV).</div></div>
+          <div class="st"><div class="n">2</div><div class="tx"><b>Screenshot the payment.</b> You'll reference it after submitting the form.</div></div>
+          <div class="st"><div class="n">3</div><div class="tx"><b>Fill the form &rarr;</b> Enter your details. We'll send the Google Meet link to your email.</div></div>
+        </div>
+        <div class="qr">
+          <a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop%20Registration" class="btn btn--primary" style="width:100%;justify-content:center;margin-bottom:12px;">Pay &#8377;250 Now &rarr;</a>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ffffff&color=1D2A24&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%2BASV%26am%3D250%26cu%3DINR%26tn%3DC3%2BWorkshop%2BRegistration" alt="UPI QR" width="160" height="160">
+          <p class="cap">Or scan to pay</p>
+        </div>
       </div>
-      <dl class="spec-plate reveal">
-        <div class="spec-row"><dt>Engineering</dt><dd>3 yrs at Siemens Digital Industries (Associate SDE) &middot; 1 yr at Skoda-Audi (ECN Coordinator)</dd></div>
-        <div class="spec-row"><dt>Education</dt><dd>M.Tech, Additive Manufacturing, NIT Warangal (Class Representative) &middot; B.Tech, Mechanical Engineering</dd></div>
-        <div class="spec-row"><dt>Mentorship</dt><dd>10+ years &middot; 15+ development camps &middot; 1,000+ students impacted since 2017</dd></div>
-        <div class="spec-row"><dt>Youth Camps</dt><dd>Facilitated two 6-day National Youth Camps with the Auroville Foundation (2024 & 2026)</dd></div>
-        <div class="spec-row"><dt>Educator Training</dt><dd>Trained 120+ educators across Andhra Pradesh and Telangana in student-focused teaching</dd></div>
-        <div class="spec-row"><dt>Certifications</dt><dd>Certified Career Counselor, Vriksh Academy (Govt. of India recognized, 2023) &middot; Certified IKS Teacher, Anaadi Foundation (2025)</dd></div>
-        <div class="spec-row"><dt>STEM & Making</dt><dd>Set up 3D printing labs at two Auroville schools &middot; Founded Shristi Maker Space, Eluru (2019)</dd></div>
-        <div class="spec-row"><dt>Publications</dt><dd>"The World of Twin Avatars" quiz book (2023) &middot; ICAM 2024 paper on Laser Metal Deposition</dd></div>
-        <div class="spec-row"><dt>Languages</dt><dd>Telugu, Hindi, English, Marathi</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="band">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">[ Questions ]</span>
-        <h2>Before you register</h2>
-      </div>
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q">I'm not sure about my career yet. Is this for me?</button>
-          <div class="faq-a"><p>That's exactly who this is for. C3 is built for students who feel uncertain &mdash; not those who have it all figured out. The workshop will give you tools to start narrowing down, not a lecture about what you should already know.</p></div>
+      <div>
+        <div class="price">
+          <div class="price-h"><span class="eyebrow">Workshop Fee</span><div class="price-amt">&#8377;250 <span>/ 90 min</span></div></div>
+          <div class="price-b"><p><b>Sun, 23 August &middot; 9:00–10:30 AM IST</b><br>Google Meet &middot; Link sent after registration</p></div>
         </div>
-        <div class="faq-item">
-          <button class="faq-q">Why &#8377;250 for 90 minutes?</button>
-          <div class="faq-a"><p>It's a paid demo of the full 5-week program. You get real tools and frameworks you can use immediately &mdash; not a marketing pitch. The fee also ensures you show up, which is the first test of taking your career seriously.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What if I can't attend live?</button>
-          <div class="faq-a"><p>The workshop is on Google Meet. If you can't make it live, register anyway &mdash; we'll share the recording with all registered participants so you don't miss the exercises.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">I'm not an engineering student. Can I still join?</button>
-          <div class="faq-a"><p>C3 is designed for engineering students, but the methodology &mdash; Holland Codes, AEIOU, prototype conversations &mdash; works for anyone in a career transition. You're welcome to join.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">What happens after the workshop?</button>
-          <div class="faq-a"><p>If the workshop resonates, you can enroll in the full 5-week weekend program. Each week builds on the last, taking you from reflection to a written 4&ndash;6 month roadmap. There's no obligation &mdash; the workshop is useful on its own.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">Do I need to prepare anything?</button>
-          <div class="faq-a"><p>Just come with an open mind and a notebook. You'll be doing real exercises during the session &mdash; the Holland Codes assessment and an AEIOU breakdown &mdash; so having somewhere to write helps.</p></div>
+        <form class="reg" id="regForm">
+          <div><label for="n">Name</label><input type="text" id="n" placeholder="Your full name"></div>
+          <div><label for="em">Email</label><input type="email" id="em" placeholder="We'll send the Meet link here"></div>
+          <div><label for="col">College</label><input type="text" id="col" placeholder="Your college name"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div><label for="yr">Year</label><select id="yr"><option value="">Select</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option><option>Graduate</option></select></div>
+            <div><label for="br">Branch</label><input type="text" id="br" placeholder="e.g. Mechanical"></div>
+          </div>
+          <div><label for="q">Question? (optional)</label><textarea id="q" placeholder="Anything for Nagarjuna"></textarea></div>
+          <button type="button" id="submitReg" class="btn btn--primary" style="width:100%;justify-content:center;">Submit Registration &rarr;</button>
+        </form>
+        <div class="ok" id="regOk">
+          <h3>Registration Received!</h3>
+          <p>We've got your details. The Google Meet link will be sent to your email before the workshop.</p>
+          <p class="small">If you haven't paid yet, pay &#8377;250 to 8686084844@ybl via UPI.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="band contact">
-    <span class="crop crop--tl" aria-hidden="true" style="opacity:0.25;"></span>
-    <span class="crop crop--tr" aria-hidden="true" style="opacity:0.25;"></span>
-    <div class="container">
-      <span class="eyebrow">[ Still Deciding? ]</span>
-      <h2>Have a question before you register?</h2>
-      <p class="lead">Reach out &mdash; we're happy to walk you through the workshop, the full program, or whether C3 is the right fit for where you are right now.</p>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <span class="eyebrow">Email</span>
-          <a href="mailto:nagarjuna.asv@gmail.com?subject=C3%20Workshop%20Enquiry">nagarjuna.asv@gmail.com</a>
-        </div>
-        <div class="contact-card">
-          <span class="eyebrow">Call / WhatsApp</span>
-          <a href="https://wa.me/918686084844" target="_blank" rel="noopener">+91 86860 84844</a>
-        </div>
-      </div>
-      <div class="btn-row" style="margin-top:32px;">
-        <a href="#register" class="btn btn--primary">Register for &#8377;&nbsp;250 &rarr;</a>
-        <a href="https://wa.me/918686084844" target="_blank" rel="noopener" class="btn btn--on-dark">WhatsApp us</a>
-      </div>
+<section id="program" class="section">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">[ The 5-Week Cycle ]</span>
+      <h2>One action cycle. Five weeks. Zero analysis-paralysis.</h2>
+      <p>Reflect &rarr; Synthesize &rarr; Investigate &rarr; Test &rarr; Evaluate. Each week moves you closer to a plan you trust.</p>
     </div>
-  </section>
+    <div class="weeks">
+      <div class="wk"><div class="tag"><span class="n">WK.01 &middot; REFLECT</span><span class="v">Mapping the Core</span></div><ul><li>Holland Codes assessment — find your top 3 traits and where they show up in real roles.</li><li>AEIOU method — break down 5 past experiences to surface hidden skills.</li></ul></div>
+      <div class="wk"><div class="tag"><span class="n">WK.02 &middot; SYNTHESIZE</span><span class="v">Pattern Mapping</span></div><ul><li>Cross-check Holland + AEIOU results for repeating patterns.</li><li>Draft 3 directions: Probable, Alternate, and Imaginary paths.</li></ul></div>
+      <div class="wk"><div class="tag"><span class="n">WK.03 &middot; INVESTIGATE</span><span class="v">Real-World Research</span></div><ul><li>Find and approach working professionals in each path.</li><li>Run "prototype conversations" that test assumptions before committing years.</li></ul></div>
+      <div class="wk"><div class="tag"><span class="n">WK.04 &middot; TEST</span><span class="v">Tiny Experiments</span></div><ul><li>Design a small real project using tools your target industry runs on.</li><li>Track energy and focus — data about fit, not just output.</li></ul></div>
+      <div class="wk"><div class="tag"><span class="n">WK.05 &middot; EVALUATE</span><span class="v">Build the Roadmap</span></div><ul><li>Review 5 weeks of evidence about your energy, fit, and direction.</li><li>Leave with a written 4–6 month roadmap you wrote yourself.</li></ul></div>
+    </div>
+    <div class="incl">
+      <div class="it"><span class="t">Live Session</span><p>90-min weekend session on Google Meet</p></div>
+      <div class="it"><span class="t">Homework</span><p>Practical assignment between sessions</p></div>
+      <div class="it"><span class="t">Resources</span><p>Tools, templates, curated reading</p></div>
+      <div class="it"><span class="t">AI Guidance</span><p>AI-assisted career research support</p></div>
+    </div>
+  </div>
+</section>
 
-</main>
+<section id="facilitator" class="section deep">
+  <div class="wrap fac">
+    <div>
+      <span class="eyebrow">[ Who's Running This ]</span>
+      <h2>Nagarjuna ASV</h2>
+      <p class="role">Ex-Siemens engineer. NIT Warangal. Certified Career Counselor. 10+ years mentoring 1,000+ students across India.</p>
+    </div>
+    <dl class="spec">
+      <div class="sr"><dt>Engineering</dt><dd>3 yrs Siemens (Associate SDE) &middot; 1 yr Skoda-Audi</dd></div>
+      <div class="sr"><dt>Education</dt><dd>M.Tech, Additive Manufacturing, NIT Warangal</dd></div>
+      <div class="sr"><dt>Certifications</dt><dd>Certified Career Counselor (Vriksh Academy, Govt. of India) &middot; IKS Teacher (Anaadi Foundation)</dd></div>
+      <div class="sr"><dt>Mentorship</dt><dd>15+ youth camps &middot; 2 National Youth Camps with Auroville Foundation</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="eyebrow">[ Still Deciding? ]</span>
+    <h2>Have a question?</h2>
+    <p class="lead">Reach out — we're happy to walk you through it.</p>
+    <div class="cgrid">
+      <div class="cc"><span class="eyebrow">Email</span><a href="mailto:nagarjuna.asv@gmail.com?subject=C3%20Workshop">nagarjuna.asv@gmail.com</a></div>
+      <div class="cc"><span class="eyebrow">WhatsApp</span><a href="https://wa.me/918686084844" target="_blank" rel="noopener">+91 86860 84844</a></div>
+    </div>
+    <div class="row" style="margin-top:24px">
+      <a href="#register" class="btn btn--primary">Register &rarr;</a>
+      <a href="https://wa.me/918686084844" target="_blank" rel="noopener" class="btn btn--on-dark">WhatsApp us</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="container footer-inner">
-    <span>C3 &mdash; COMPETENT CAREER CRAFTING</span>
+  <div class="wrap ft">
+    <span>C3 — COMPETENT CAREER CRAFTING</span>
     <span>NAGARJUNA ASV &middot; EX-SIEMENS &middot; NIT WARANGAL</span>
   </div>
 </footer>
 
-<script src="script.js?v=3"></script>
+<script>
+document.getElementById('burger').addEventListener('click',function(){
+  var n=document.getElementById('nav');
+  n.style.display=n.style.display==='flex'?'none':'flex';
+  if(n.style.display==='flex'){n.style.cssText='position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid var(--line);padding:0 24px'}
+  n.querySelectorAll('a').forEach(function(a){a.style.cssText='width:100%;padding:14px 0;border-top:1px solid var(--line-soft)'});
+});
+var HK='https://script.google.com/macros/s/AKfycbwtbx0BCUuix9vDz_ygGtktAjzyG4_QDvmKMsnQB59YifezHWm0XgRFEb1QD9lpLh0r9g/exec';
+var hi=document.createElement('iframe');
+hi.name='hf';hi.id='hf';hi.style.display='none';
+document.body.appendChild(hi);
+document.getElementById('submitReg').addEventListener('click',function(){
+  var n=document.getElementById('n').value.trim(),
+      em=document.getElementById('em').value.trim(),
+      col=document.getElementById('col').value.trim(),
+      yr=document.getElementById('yr').value,
+      br=document.getElementById('br').value.trim();
+  if(!n||!em||!col||!yr||!br){alert('Please fill in all required fields.');return;}
+  var q=document.getElementById('q').value.trim();
+  var btn=this;btn.disabled=true;btn.textContent='Submitting...';
+  var f=document.createElement('form');
+  f.method='POST';f.action=HK;f.target='hf';
+  var d={name:n,email:em,college:col,year:yr,branch:br,question:q};
+  Object.keys(d).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=d[k];f.appendChild(i);});
+  document.body.appendChild(f);f.submit();
+  setTimeout(function(){document.body.removeChild(f);
+    document.getElementById('regForm').style.display='none';
+    document.getElementById('regOk').style.display='block';
+    btn.disabled=false;btn.textContent='Submit Registration \u2192';
+  },2500);
+});
+</script>
 </body>
 </html>
