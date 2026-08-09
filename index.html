@@ -192,7 +192,7 @@
           <div class="pay-steps">
             <div class="pay-step">
               <div class="step-num">1</div>
-              <div class="step-text"><strong>Pay &#8377;&nbsp;250 via UPI.</strong> Scan the QR code or send to UPI ID <strong>8686084844@ybl</strong> (Name: Nagarjuna ASV).</div>
+              <div class="step-text"><strong>Pay &#8377;&nbsp;250 via UPI.</strong> Tap the Pay Now button below or scan the QR code. UPI ID: <strong>8686084844@ybl</strong> (Name: Nagarjuna ASV).</div>
             </div>
             <div class="pay-step">
               <div class="step-num">2</div>
@@ -204,8 +204,9 @@
             </div>
           </div>
           <div class="qr-box">
+            <a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop%20Registration" class="btn btn--primary" style="width:100%; justify-content:center; margin-bottom:14px;">Pay &#8377;&nbsp;250 Now &rarr;</a>
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&bgcolor=ffffff&color=1D2A24&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%2BASV%26am%3D250%26cu%3DINR%26tn%3DC3%2BWorkshop%2BRegistration" alt="UPI QR code for &#8377;250 C3 workshop registration" width="180" height="180">
-            <p class="cycle-caption">Scan to pay &#8377;&nbsp;250</p>
+            <p class="cycle-caption">Or scan the QR to pay &#8377;&nbsp;250</p>
           </div>
         </div>
         <div class="reveal">
@@ -224,16 +225,16 @@
           <form class="reg-form" id="regForm">
             <div>
               <label for="regName">Name</label>
-              <input type="text" id="regName" name="name" required placeholder="Your full name">
+              <input type="text" id="regName" name="name" placeholder="Your full name">
             </div>
             <div>
               <label for="regCollege">College</label>
-              <input type="text" id="regCollege" name="college" required placeholder="Your college name">
+              <input type="text" id="regCollege" name="college" placeholder="Your college name">
             </div>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
               <div>
                 <label for="regYear">Year</label>
-                <select id="regYear" name="year" required>
+                <select id="regYear" name="year">
                   <option value="">Select year</option>
                   <option value="1st Year">1st Year</option>
                   <option value="2nd Year">2nd Year</option>
@@ -244,14 +245,14 @@
               </div>
               <div>
                 <label for="regBranch">Branch</label>
-                <input type="text" id="regBranch" name="branch" required placeholder="e.g. Mechanical">
+                <input type="text" id="regBranch" name="branch" placeholder="e.g. Mechanical">
               </div>
             </div>
             <div>
               <label for="regQuestion">Question for Nagarjuna? (optional)</label>
               <textarea id="regQuestion" name="question" placeholder="Anything you'd like addressed in the workshop"></textarea>
             </div>
-            <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">Send via WhatsApp &rarr;</button>
+            <button type="button" id="sendWhatsApp" class="btn btn--primary" style="width:100%; justify-content:center;">Send via WhatsApp &rarr;</button>
           </form>
           <p class="cycle-caption" style="margin-top:12px;">Opens WhatsApp with your details pre-filled</p>
         </div>
