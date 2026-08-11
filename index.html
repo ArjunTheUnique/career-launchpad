@@ -5,75 +5,103 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>C3 — Competent Career Crafting</title>
 <meta name="description" content="₹250 workshop · 23 Aug · 9 AM IST · Google Meet. Career-design tools for engineering students.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23C14A1F'/><text x='50' y='68' font-size='44' font-family='Arial' font-weight='900' fill='%23F2F6ED' text-anchor='middle'>C3</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23C84B1F'/><text x='50' y='68' font-size='44' font-family='Arial' font-weight='900' fill='%23FAF8F2' text-anchor='middle'>C3</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--p:#F2F6ED;--c:#FCFCF8;--k:#1D2A24;--ks:#51625A;--kf:#8A9A8F;--r:#C14A1F;--rd:#9C3B16;--b:#2C4A5C;--l:#C9D6BF;--ls:#DCE6D3;--d:'Big Shoulders Display',sans-serif;--s:'IBM Plex Sans',sans-serif;--m:'IBM Plex Mono',monospace}
-body{background:var(--p);color:var(--k);font-family:var(--s);font-size:15px;line-height:1.5}
+:root{
+--p:#EDE8DC;--c:#FAF8F2;--k:#1A1A1A;--ks:#4A4A4A;--kf:#8A8A8A;--r:#C84B1F;--rd:#A53D17;--b:#1B3A4B;--l:#D4CFC0;--ls:#E2DED0;
+--accent:#E8B83C;--green:#3A5A40;--d:'Big Shoulders Display',sans-serif;--s:'IBM Plex Sans',sans-serif;--m:'IBM Plex Mono',monospace
+}
+body{background:var(--p);color:var(--k);font-family:var(--s);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}ul{list-style:none}
-h1,h2,h3{font-family:var(--d);line-height:.95;letter-spacing:.01em}
-.w{max-width:1040px;margin:0 auto;padding:0 20px}
-.ey{font-family:var(--m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--r)}
-.btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--m);font-size:12px;text-transform:uppercase;padding:12px 18px;border-radius:3px;border:1.5px solid transparent;cursor:pointer;transition:.18s}.btn:hover{transform:translateY(-1px)}
-.bp{background:var(--r);color:var(--c)}.bp:hover{background:var(--rd)}
+h1,h2,h3{font-family:var(--d);line-height:.92;letter-spacing:.01em}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+.ey{font-family:var(--m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--r);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--m);font-size:14px;text-transform:uppercase;padding:14px 22px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.18s;font-weight:600}
+.btn:hover{transform:translateY(-2px)}
+.bp{background:var(--r);color:#fff}.bp:hover{background:var(--rd)}
 .bg{border-color:var(--k);color:var(--k)}.bg:hover{background:var(--k);color:var(--p)}
-.fw{width:100%;justify-content:center}.fx{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.h{position:sticky;top:0;z-index:50;background:rgba(242,246,237,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--l)}
-.hi{max-width:1040px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
-.lo{font-family:var(--d);font-weight:900;font-size:22px}
-.nv{display:flex;gap:20px}.nv a{font-family:var(--m);font-size:11px;text-transform:uppercase;color:var(--ks)}.nv a:hover{color:var(--r)}.nv .ct{background:var(--r);color:var(--c);padding:7px 12px;border-radius:3px}
-.bu{display:none;flex-direction:column;gap:4px;background:none;border:0;cursor:pointer;padding:6px}.bu span{width:20px;height:2px;background:var(--k)}
-.hr{position:relative;overflow:hidden;padding:48px 0 36px;background-image:linear-gradient(rgba(201,214,191,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(201,214,191,.35) 1px,transparent 1px);background-size:32px 32px}
-.hg{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-.hr h1{font-size:clamp(32px,5vw,56px);text-transform:uppercase}.hr h1 em{font-style:normal;color:var(--r)}
-.sb{max-width:48ch;color:var(--ks);font-size:15px;margin:14px 0 18px}
-.ch{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}.ch span{font-family:var(--m);font-size:10.5px;padding:5px 9px;border:1px solid var(--l);border-radius:3px;color:var(--ks);background:var(--c)}
-.hv{text-align:center;position:relative}
-.stp{display:inline-block;border:2px solid var(--r);border-radius:3px;padding:12px 20px;text-align:center;transform:rotate(3deg);background:var(--c);box-shadow:0 2px 10px rgba(29,42,36,.08)}.stp i{font-family:var(--d);font-size:32px;font-weight:900;color:var(--r);font-style:normal;display:block}.stp u{font-family:var(--m);font-size:9px;text-transform:uppercase;color:var(--ks);margin-top:2px}
-.cy{font-family:var(--m);font-size:11px;color:var(--b);margin-top:16px;letter-spacing:.04em}.cy b{color:var(--r)}
-.cp{text-align:center;font-family:var(--m);font-size:10px;color:var(--kf);text-transform:uppercase;margin-top:6px}
-.s{padding:44px 0}.sd{background:#E7EEDD}
-.hd{max-width:560px;margin-bottom:24px}.hd h2{font-size:clamp(22px,3vw,34px);text-transform:uppercase}.hd p{color:var(--ks);font-size:14px;margin-top:8px}
-.wm{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}.wm span{font-family:var(--m);font-size:11px;padding:6px 10px;border:1px solid var(--l);border-radius:3px;background:var(--c)}.wm b{color:var(--r)}
-.wc{display:grid;grid-template-columns:1fr 1fr;gap:12px}.wi{background:var(--c);border:1px solid var(--l);border-radius:3px;padding:16px;border-top:3px solid var(--r)}.wi+.wi{border-top-color:var(--b)}.wi h3{font-family:var(--d);font-weight:700;font-size:15px;margin-bottom:8px}.wi li{color:var(--ks);font-size:13px;padding-left:12px;position:relative;margin-bottom:5px}.wi li::before{content:"\2192";position:absolute;left:0;color:var(--r)}
-.rg{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.st{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}.st i{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--r);color:var(--c);font-family:var(--m);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;font-style:normal}.st p{font-size:13px;color:var(--ks);line-height:1.4}.st b{color:var(--k)}
-.qr{text-align:center;margin-top:14px}.qr img{border:1px solid var(--l);border-radius:3px;padding:4px;background:var(--c)}
-.pr{border:1px solid var(--l);background:var(--c);border-radius:3px;overflow:hidden;margin-bottom:14px}.ph{background:var(--k);color:var(--p);padding:14px 18px}.ph .ey{color:#E8A688}.pa{font-family:var(--d);font-size:30px;font-weight:900;line-height:1}.pa span{font-size:12px;font-weight:400;color:var(--kf);font-family:var(--m)}.pb{padding:12px 18px;font-size:12.5px;color:var(--ks)}.pb b{color:var(--k)}
-form.f{display:flex;flex-direction:column;gap:10px}form.f label{font-family:var(--m);font-size:10px;text-transform:uppercase;color:var(--r);display:block;margin-bottom:3px}form.f input,form.f select,form.f textarea{font-family:var(--s);font-size:13px;padding:10px;border:1px solid var(--l);border-radius:3px;background:var(--c);color:var(--k);width:100%}form.f input:focus,form.f select:focus,form.f textarea:focus{outline:none;border-color:var(--r)}form.f textarea{resize:vertical;min-height:40px}.rr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ok{display:none;padding:18px;border:1px solid var(--r);border-radius:3px;background:var(--c);text-align:center}.ok h3{font-family:var(--d);font-size:18px;color:var(--r);margin-bottom:4px}.ok p{color:var(--ks);font-size:13px}.ok .sm{color:var(--kf);font-size:11px;margin-top:8px;font-family:var(--m)}
-.wks{display:flex;flex-direction:column}.wk{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--l)}.wk:last-child{border-bottom:1px solid var(--l)}.wk .tg .n{display:block;font-family:var(--m);font-size:10.5px;color:var(--r);font-weight:600}.wk .tg .v{display:block;font-family:var(--d);text-transform:uppercase;font-size:16px;line-height:1;margin-top:3px}.wk li{color:var(--ks);font-size:12.5px;padding-left:12px;position:relative;margin-bottom:3px}.wk li::before{content:"\2014";position:absolute;left:0;color:var(--kf)}
-.ic{margin-top:24px;padding:14px;border:1px solid var(--l);background:var(--c);border-radius:3px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.ic .it .t{font-family:var(--m);font-size:9.5px;color:var(--r);text-transform:uppercase;display:block;margin-bottom:3px}.ic .it p{font-size:11.5px}
-.fac{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.fac h2{font-size:clamp(22px,2.8vw,32px)}.fac .role{color:var(--ks);font-size:13px;margin-top:6px}.sp{border:1px solid var(--l);background:var(--c);border-radius:3px;overflow:hidden}.sr{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:10px 14px;border-bottom:1px solid var(--ls)}.sr:last-child{border-bottom:none}.sr dt{font-family:var(--m);font-size:10px;text-transform:uppercase;color:var(--r)}.sr dd{font-size:12px}
-.ct{background:var(--k);color:var(--p);padding:44px 0}.ct .ey{color:#E8A688}.ct h2{color:var(--p);font-size:clamp(22px,3vw,34px);text-transform:uppercase}.ct p.lead{color:var(--ls);font-size:14px;max-width:48ch;margin:8px 0 18px}.cg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}.ci{border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:12px 14px}.ci .ey{color:rgba(255,255,255,.5)}.ci a{font-family:var(--m);font-size:13px;color:var(--p)}.ci a:hover{color:var(--r)}.bd{border-color:rgba(255,255,255,.2);color:var(--p)}.bd:hover{background:var(--p);color:var(--k)}
-footer{background:#161F1B;color:var(--kf);padding:16px 0}.ft{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-family:var(--m);font-size:10px}
-@media(max-width:700px){.hg,.wc,.rg,.fac,.cg{grid-template-columns:1fr}.ic{grid-template-columns:1fr 1fr}.sr,.wk{grid-template-columns:1fr;gap:2px}.s{padding:32px 0}.hr{padding:36px 0 28px}.nv{display:none}.bu{display:flex}}
+.fw{width:100%;justify-content:center}.fx{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.h{position:sticky;top:0;z-index:50;background:rgba(237,232,220,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--l)}
+.hi{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.lo{font-family:var(--d);font-weight:900;font-size:26px}
+.nv{display:flex;gap:24px}.nv a{font-family:var(--m);font-size:13px;text-transform:uppercase;color:var(--ks);font-weight:500}.nv a:hover{color:var(--r)}.nv .ct{background:var(--r);color:#fff;padding:8px 14px;border-radius:6px}
+.bu{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}.bu span{width:22px;height:2.5px;background:var(--k);border-radius:2px}
+.hero{position:relative;overflow:hidden;padding:56px 0 44px;background:var(--k);background-image:radial-gradient(circle at 20% 50%,rgba(200,75,31,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(27,58,75,.12) 0%,transparent 50%);color:var(--p)}
+.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(36px,6vw,62px);text-transform:uppercase;color:#fff}.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .ey{color:var(--accent)}
+.sb{max-width:50ch;color:#D4CFC0;font-size:17px;margin:16px 0 20px}
+.ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.ch span{font-family:var(--m);font-size:12px;padding:7px 12px;border:1px solid rgba(255,255,255,.2);border-radius:6px;color:#D4CFC0;background:rgba(255,255,255,.05)}
+.hv{text-align:center}
+.stp{display:inline-block;border:3px solid var(--accent);border-radius:8px;padding:16px 24px;text-align:center;transform:rotate(3deg);background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}.stp i{font-family:var(--d);font-size:36px;font-weight:900;color:var(--accent);font-style:normal;display:block}.stp u{font-family:var(--m);font-size:11px;text-transform:uppercase;color:#D4CFC0;margin-top:4px}
+.cy{font-family:var(--m);font-size:12px;color:var(--accent);margin-top:20px;letter-spacing:.06em}.cy b{color:#fff}
+.cp{text-align:center;font-family:var(--m);font-size:11px;color:#8A8A8A;text-transform:uppercase;margin-top:8px}
+.s{padding:52px 0}.sd{background:var(--c)}
+.hd{max-width:620px;margin-bottom:28px}.hd h2{font-size:clamp(26px,3.5vw,38px);text-transform:uppercase}.hd p{color:var(--ks);font-size:16px;margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--c);border:1px solid var(--l);border-radius:8px;padding:20px;border-top:4px solid var(--r)}.card .t{font-family:var(--m);font-size:11px;letter-spacing:.08em;color:var(--b);text-transform:uppercase;font-weight:600}.card h3{font-family:var(--d);text-transform:none;font-weight:700;font-size:18px;margin:8px 0 6px}.card p{color:var(--ks);font-size:14px}
+.wm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.wm span{font-family:var(--m);font-size:13px;padding:8px 12px;border:1px solid var(--l);border-radius:6px;background:var(--c)}.wm b{color:var(--r)}
+.wc{display:grid;grid-template-columns:1fr 1fr;gap:14px}.wi{background:var(--c);border:1px solid var(--l);border-radius:8px;padding:18px;border-top:4px solid var(--r)}.wi+.wi{border-top-color:var(--b)}.wi h3{font-family:var(--d);font-weight:700;font-size:17px;margin-bottom:10px}.wi li{color:var(--ks);font-size:15px;padding-left:14px;position:relative;margin-bottom:6px}.wi li::before{content:"\2192";position:absolute;left:0;color:var(--r);font-weight:700}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.st{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}.st i{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--r);color:#fff;font-family:var(--m);font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;font-style:normal}.st p{font-size:15px;color:var(--ks);line-height:1.45}.st b{color:var(--k)}
+.qr{text-align:center;margin-top:16px}.qr img{border:2px solid var(--l);border-radius:8px;padding:6px;background:var(--c)}
+.pr{border:2px solid var(--l);background:var(--c);border-radius:8px;overflow:hidden;margin-bottom:16px}.ph{background:var(--k);color:var(--p);padding:16px 20px}.ph .ey{color:var(--accent)}.pa{font-family:var(--d);font-size:34px;font-weight:900;line-height:1}.pa span{font-size:14px;font-weight:400;color:#8A8A8A;font-family:var(--m)}.pb{padding:14px 20px;font-size:14px;color:var(--ks)}.pb b{color:var(--k)}
+form.f{display:flex;flex-direction:column;gap:12px}form.f label{font-family:var(--m);font-size:12px;text-transform:uppercase;color:var(--r);display:block;margin-bottom:4px;font-weight:600}form.f input,form.f select,form.f textarea{font-family:var(--s);font-size:15px;padding:12px;border:1px solid var(--l);border-radius:6px;background:var(--c);color:var(--k);width:100%}form.f input:focus,form.f select:focus,form.f textarea:focus{outline:none;border-color:var(--r)}form.f textarea{resize:vertical;min-height:50px}.rr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ok{display:none;padding:20px;border:2px solid var(--r);border-radius:8px;background:var(--c);text-align:center}.ok h3{font-family:var(--d);font-size:22px;color:var(--r);margin-bottom:6px}.ok p{color:var(--ks);font-size:15px}.ok .sm{color:var(--kf);font-size:12px;margin-top:10px;font-family:var(--m)}
+.wks{display:flex;flex-direction:column}.wk{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--l)}.wk:last-child{border-bottom:1px solid var(--l)}.wk .tg .n{display:block;font-family:var(--m);font-size:12px;color:var(--r);font-weight:600}.wk .tg .v{display:block;font-family:var(--d);text-transform:uppercase;font-size:20px;line-height:1;margin-top:4px}.wk li{color:var(--ks);font-size:14px;padding-left:14px;position:relative;margin-bottom:5px}.wk li::before{content:"\2014";position:absolute;left:0;color:var(--kf)}
+.ic{margin-top:28px;padding:18px;border:1px solid var(--l);background:var(--c);border-radius:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ic .it .t{font-family:var(--m);font-size:11px;color:var(--r);text-transform:uppercase;display:block;margin-bottom:4px;font-weight:600}.ic .it p{font-size:13px}
+.fac{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.fac img{width:120px;height:auto;border-radius:8px;border:2px solid var(--l)}
+.fac .info h2{font-size:clamp(22px,3vw,30px);text-transform:none}.fac .info .role{color:var(--ks);font-size:14px;margin-top:6px}
+.sp{border:1px solid var(--l);background:var(--c);border-radius:8px;overflow:hidden;margin-top:14px}.sr{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:10px 16px;border-bottom:1px solid var(--ls)}.sr:last-child{border-bottom:none}.sr dt{font-family:var(--m);font-size:11px;text-transform:uppercase;color:var(--r);font-weight:600}.sr dd{font-size:14px}
+.ct{background:var(--k);color:var(--p);padding:52px 0}.ct .ey{color:var(--accent)}.ct h2{color:#fff;font-size:clamp(26px,3.5vw,36px);text-transform:uppercase}.ct p.lead{color:#D4CFC0;font-size:16px;max-width:50ch;margin:10px 0 20px}.cg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}.ci{border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:14px 16px}.ci .ey{color:rgba(255,255,255,.4)}.ci a{font-family:var(--m);font-size:15px;color:#fff}.ci a:hover{color:var(--accent)}.bd{border-color:rgba(255,255,255,.2);color:#fff}.bd:hover{background:#fff;color:var(--k)}
+footer{background:#0D0D0D;color:#666;padding:18px 0}.ft{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--m);font-size:11px}
+@media(max-width:700px){
+body{font-size:16px}
+.hg,.cards,.wc,.rg,.cg{grid-template-columns:1fr}
+.ic{grid-template-columns:1fr 1fr}
+.fac{grid-template-columns:auto 1fr;gap:14px}.fac img{width:90px}
+.sr{grid-template-columns:1fr;gap:2px}.wk{grid-template-columns:1fr;gap:6px}
+.s{padding:36px 0}.hero{padding:40px 0 32px}
+.nv{display:none}.bu{display:flex}
+.hero h1{font-size:clamp(30px,8vw,48px)}
+.btn{font-size:13px;padding:12px 18px}
+.hd h2{font-size:clamp(22px,6vw,30px)}
+}
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
 </style></head><body>
 <header class="h"><div class="hi"><span class="lo">C3</span>
 <nav class="nv" id="nv"><a href="#workshop">Workshop</a><a href="#program">Program</a><a href="#facilitator">About</a><a href="#register" class="ct">Register</a></nav>
 <button class="bu" id="bu" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
-<section class="hr"><div class="w hg"><div>
+<section class="hero"><div class="w hg"><div>
 <span class="ey">[ 23 AUG · 9 AM IST · GOOGLE MEET ]</span>
 <h1>Stop guessing.<br>Start <em>prototyping</em> your career.</h1>
-<p class="sb">A 90-minute workshop with real career-design tools — not a sales pitch. Like it? The full 5-week program goes deeper.</p>
-<div class="ch"><span>What am I competent at?</span><span>Which tools to learn?</span><span>How to find direction?</span></div>
-<div class="fx"><a href="#register" class="btn bp">Register →</a><a href="#workshop" class="btn bg">What's in it?</a></div></div>
+<p class="sb">See the real career space — not singular and imaginary. The world is changing faster than your college can catch up. You can still own your career success — by design, not by chance or luck.</p>
+<div class="ch"><span>What am I competent at?</span><span>Which tools to learn?</span><span>Where to find works that align with my competency?</span></div>
+<div class="fx"><a href="#register" class="btn bp">Register →</a><a href="#workshop" class="btn bg" style="border-color:rgba(255,255,255,.3);color:#fff">What's in it?</a></div></div>
 <div class="hv"><div class="stp"><i>₹250</i><u>23 AUG · 9 AM</u></div>
 <p class="cy"><b>REFLECT</b> → SYNTHESIZE → INVESTIGATE → TEST → EVALUATE</p>
 <p class="cp">The 5-week action cycle</p></div></div></section>
-<section id="workshop" class="s sd"><div class="w">
+<section id="why" class="s sd"><div class="w">
+<div class="hd"><span class="ey">[ WHY NOW ]</span><h2>The old playbook is running out of runway.</h2></div>
+<div class="cards">
+<div class="card"><span class="t">The Real Career Space</span><h3>Beyond singular & imaginary</h3><p>Students rarely see the full landscape of real careers. C3 opens up the actual space — roles, paths, and opportunities that exist right now.</p></div>
+<div class="card"><span class="t">The Speed Gap</span><h3>The world moves faster</h3><p>Industry evolves faster than curriculum. By the time a syllabus catches up, the field has already shifted. You need tools to navigate this, not just memorise it.</p></div>
+<div class="card"><span class="t">Your Agency</span><h3>By design, not luck</h3><p>Career success doesn't have to be chance. You can build your own path — refining your inclinations while studying, without disturbing your academics.</p></div>
+</div></div></section>
+<section id="workshop" class="s"><div class="w">
 <div class="hd"><span class="ey">[ THE WORKSHOP ]</span><h2>90 min. Real tools.</h2></div>
 <div class="wm"><span><b>Date:</b> Sun, 23 Aug</span><span><b>Time:</b> 9:00–10:30 AM</span><span><b>Where:</b> Google Meet</span><span><b>Fee:</b> ₹250</span></div>
-<div class="wc"><div class="wi"><h3>What happens</h3><ul><li>C3 methodology — what it is, why it works</li><li>Holland Codes — find your top 3 traits</li><li>AEIOU method — break experiences into skills</li><li>Preview of 5-week program + Q&A</li></ul></div>
-<div class="wi"><h3>What you get</h3><ul><li>Your top 3 Holland traits — live</li><li>A started AEIOU map</li><li>Clear picture of the 5-week program</li><li>A real answer to whether C3 fits you</li></ul></div></div></div></section>
-<section id="register" class="s"><div class="w">
+<div class="wc"><div class="wi"><h3>What happens</h3><ul><li>See the real career space — not imaginary paths</li><li>Holland Codes — find your areas of inclination</li><li>AEIOU method — how to refine inclinations while studying</li><li>How to create your own path without disturbing studies</li><li>Preview of 5-week program + Q&A</li></ul></div>
+<div class="wi"><h3>What you get</h3><ul><li>Your top 3 Holland traits — identified live</li><li>A started AEIOU map of your experiences</li><li>Clear picture of your real career space</li><li>A way to own your career — by design</li><li>A real answer to whether C3 fits you</li></ul></div></div></div></section>
+<section id="register" class="s sd"><div class="w">
 <div class="hd"><span class="ey">[ SAVE YOUR SEAT ]</span><h2>Pay. Fill the form. Done.</h2></div>
 <div class="rg"><div>
 <div class="st"><i>1</i><p><b>Pay ₹250 via UPI.</b> Tap button or scan QR. UPI ID: <b>8686084844@ybl</b></p></div>
 <div class="st"><i>2</i><p><b>Screenshot the payment.</b> Reference it after submitting.</p></div>
 <div class="st"><i>3</i><p><b>Fill the form →</b> We'll send the Meet link to your email.</p></div>
-<div class="qr"><a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop" class="btn bp fw">Pay ₹250 Now →</a><br><img src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%26am%3D250%26cu%3DINR" alt="UPI QR" width="130" height="130" style="margin-top:10px"><p class="cp">Or scan to pay</p></div></div><div>
+<div class="qr"><a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop" class="btn bp fw">Pay ₹250 Now →</a><br><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%26am%3D250%26cu%3DINR" alt="UPI QR" width="140" height="140" style="margin-top:12px"><p class="cp">Or scan to pay</p></div></div><div>
 <div class="pr"><div class="ph"><span class="ey">Workshop Fee</span><div class="pa">₹250 <span>/ 90 min</span></div></div><div class="pb"><b>Sun, 23 Aug · 9:00–10:30 AM IST</b><br>Google Meet · Link sent after registration</div></div>
 <form class="f" id="rf">
 <div><label for="n">Name</label><input type="text" id="n" placeholder="Full name"></div>
@@ -96,16 +124,21 @@ footer{background:#161F1B;color:var(--kf);padding:16px 0}.ft{display:flex;justif
 </div>
 <div class="ic"><div class="it"><span class="t">Live</span><p>90-min on Meet</p></div><div class="it"><span class="t">Homework</span><p>Practical tasks</p></div><div class="it"><span class="t">Resources</span><p>Tools & templates</p></div><div class="it"><span class="t">AI Guidance</span><p>Career research</p></div></div>
 </div></section>
-<section id="facilitator" class="s"><div class="w fac">
-<div><span class="ey">[ WHO'S RUNNING THIS ]</span><h2>Nagarjuna ASV</h2><p class="role">Ex-Siemens engineer · NIT Warangal · Certified Career Counselor · 10+ years mentoring 1,000+ students.</p></div>
-<dl class="sp"><div class="sr"><dt>Engineering</dt><dd>3 yrs Siemens · 1 yr Skoda-Audi</dd></div><div class="sr"><dt>Education</dt><dd>M.Tech, Additive Mfg, NIT Warangal</dd></div><div class="sr"><dt>Certifications</dt><dd>Career Counselor (Govt. of India) · IKS Teacher</dd></div><div class="sr"><dt>Mentorship</dt><dd>15+ youth camps · 2 National Youth Camps</dd></div></dl>
-</div></section>
+<section id="facilitator" class="s"><div class="w">
+<div class="hd"><span class="ey">[ WHO'S RUNNING THIS ]</span></div>
+<div class="fac">
+<img src="nagarjuna.jpg" alt="Nagarjuna ASV">
+<div class="info">
+<h2>Nagarjuna ASV</h2>
+<p class="role">Ex-Siemens engineer · NIT Warangal · Certified Career Counselor · 10+ years mentoring 1,000+ students.</p>
+<dl class="sp"><div class="sr"><dt>Engineering</dt><dd>3 yrs Siemens · 1 yr Skoda-Audi</dd></div><div class="sr"><dt>Education</dt><dd>M.Tech, Additive Mfg, NIT Warangal</dd></div><div class="sr"><dt>Certifications</dt><dd>Career Counselor (Govt. of India) · IKS Teacher</dd></div></dl>
+</div></div></div></section>
 <section class="ct"><div class="w"><span class="ey">[ STILL DECIDING? ]</span><h2>Have a question?</h2><p class="lead">Reach out — we're happy to walk you through it.</p>
 <div class="cg"><div class="ci"><span class="ey">Email</span><br><a href="mailto:nagarjuna.asv@gmail.com?subject=C3%20Workshop">nagarjuna.asv@gmail.com</a></div><div class="ci"><span class="ey">WhatsApp</span><br><a href="https://wa.me/918686084844" target="_blank" rel="noopener">+91 86860 84844</a></div></div>
 <div class="fx"><a href="#register" class="btn bp">Register →</a><a href="https://wa.me/918686084844" target="_blank" rel="noopener" class="btn bd">WhatsApp us</a></div></div></section>
 <footer><div class="w ft"><span>C3 — COMPETENT CAREER CRAFTING</span><span>NAGARJUNA ASV · EX-SIEMENS · NIT WARANGAL</span></div></footer>
 <script>
-document.getElementById('bu').onclick=function(){var n=document.getElementById('nv'),s=n.style.display==='flex';n.style.display=s?'none':'flex';if(!s){n.style.cssText='position:absolute;top:100%;left:0;right:0;background:var(--p);flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid var(--l);padding:0 20px';n.querySelectorAll('a').forEach(function(a){a.style.cssText='width:100%;padding:12px 0;border-top:1px solid var(--ls)'})}};
+document.getElementById('bu').onclick=function(){var n=document.getElementById('nv'),s=n.style.display==='flex';n.style.display=s?'none':'flex';if(!s){n.style.cssText='position:absolute;top:100%;left:0;right:0;background:var(--p);flex-direction:column;align-items:flex-start;gap:0;border-bottom:2px solid var(--l);padding:0 20px';n.querySelectorAll('a').forEach(function(a){a.style.cssText='width:100%;padding:14px 0;border-top:1px solid var(--ls)'})}};
 var HK='https://script.google.com/macros/s/AKfycbz4k5z8S73oa0-cedGDfzmaB8p7EEH-0UP1w31O5DB6gWcUkKyHIjPTd5c8f0a7qeMLqw/exec';
 var hi=document.createElement('iframe');hi.name='hf';hi.style.display='none';document.body.appendChild(hi);
 document.getElementById('sb').onclick=function(){var d={},id={name:'n',email:'em',college:'col',year:'yr',branch:'br',question:'q'};for(var k in id)d[k]=document.getElementById(id[k]).value.trim();if(!d.name||!d.email||!d.college||!d.year||!d.branch){alert('Please fill in all required fields.');return;}var t=this;t.disabled=true;t.textContent='Submitting...';var f=document.createElement('form');f.method='POST';f.action=HK;f.target='hf';Object.keys(d).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=d[k];f.appendChild(i)});document.body.appendChild(f);f.submit();setTimeout(function(){document.body.removeChild(f);document.getElementById('rf').style.display='none';document.getElementById('ok').style.display='block';t.disabled=false;t.textContent='Submit \u2192'},2500)};
