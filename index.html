@@ -2,144 +2,1183 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>C3 — Competent Career Crafting</title>
-<meta name="description" content="₹250 workshop · 23 Aug · 9 AM IST · Google Meet. Career-design tools for engineering students.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23C84B1F'/><text x='50' y='68' font-size='44' font-family='Arial' font-weight='900' fill='%23FAF8F2' text-anchor='middle'>C3</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0a1628">
+<meta name="description" content="RITAM C3 Competent Career Crafting - Weekend Web Workshop for Engineering Students. 23 Aug 2026, Google Meet, 9-10:30 AM.">
+<title>C3 Workshop · Competent Career Crafting · 23 Aug 2026</title>
+
+<!-- ── Social preview (WhatsApp / Instagram / iMessage / Facebook) ────────── -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design Your Career, Don't Just Find a Job · C3 Workshop">
+<meta property="og:description" content="Free your Sunday morning for a 90-min live workshop for engineering students. 23 Aug 2026, 9-10:30 AM · Only ₹250, limited seats.">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/og-image.png">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Your Career, Don't Just Find a Job · C3 Workshop">
+<meta name="twitter:description" content="90-min live workshop for engineering students. 23 Aug 2026 · ₹250, limited seats.">
+<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
---p:#EDE8DC;--c:#FAF8F2;--k:#1A1A1A;--ks:#4A4A4A;--kf:#8A8A8A;--r:#C84B1F;--rd:#A53D17;--b:#1B3A4B;--l:#D4CFC0;--ls:#E2DED0;
---accent:#E8B83C;--green:#3A5A40;--d:'Big Shoulders Display',sans-serif;--s:'IBM Plex Sans',sans-serif;--m:'IBM Plex Mono',monospace
+:root {
+--bg: #0a1628;
+--bg-2: #0f1e35;
+--surface: rgba(255,255,255,0.04);
+--surface-2: rgba(255,255,255,0.06);
+--border: rgba(255,255,255,0.09);
+--border-strong: rgba(255,255,255,0.16);
+--text: #f1f5f9;
+--text-dim: #94a3b8;
+--text-faint: #64748b;
+--amber: #fbbf24;
+--amber-dim: rgba(251,191,36,0.12);
+--amber-glow: rgba(251,191,36,0.25);
+--teal: #2dd4bf;
+--teal-dim: rgba(45,212,191,0.10);
+--rose: #fb7185;
+--radius: 18px;
+--radius-sm: 12px;
+--maxw: 460px;
+--font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+--font-head: 'Space Grotesk', system-ui, sans-serif;
 }
-body{background:var(--p);color:var(--k);font-family:var(--s);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}ul{list-style:none}
-h1,h2,h3{font-family:var(--d);line-height:.92;letter-spacing:.01em}
-.w{max-width:960px;margin:0 auto;padding:0 20px}
-.ey{font-family:var(--m);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--r);font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--m);font-size:15px;text-transform:uppercase;padding:14px 22px;border-radius:6px;border:2px solid transparent;cursor:pointer;transition:.18s;font-weight:600}
-.btn:hover{transform:translateY(-2px)}
-.bp{background:var(--r);color:#fff}.bp:hover{background:var(--rd)}
-.bg{border-color:var(--k);color:var(--k)}.bg:hover{background:var(--k);color:var(--p)}
-.fw{width:100%;justify-content:center}.fx{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.h{position:sticky;top:0;z-index:50;background:rgba(237,232,220,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--l)}
-.hi{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-.lo{font-family:var(--d);font-weight:900;font-size:28px}
-.nv{display:flex;gap:24px}.nv a{font-family:var(--m);font-size:15px;text-transform:uppercase;color:var(--ks);font-weight:500}.nv a:hover{color:var(--r)}.nv .ct{background:var(--r);color:#fff;padding:9px 16px;border-radius:6px}
-.bu{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}.bu span{width:22px;height:2.5px;background:var(--k);border-radius:2px}
-.hero{position:relative;overflow:hidden;padding:56px 0 44px;background:var(--k);background-image:radial-gradient(circle at 20% 50%,rgba(200,75,31,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(27,58,75,.12) 0%,transparent 50%);color:var(--p)}
-.hg{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
-.hero h1{font-size:clamp(36px,6vw,62px);text-transform:uppercase;color:#fff}.hero h1 em{font-style:normal;color:var(--accent)}
-.hero .ey{color:var(--accent)}
-.sb{max-width:50ch;color:#D4CFC0;font-size:17px;margin:16px 0 20px}
-.ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}.ch span{font-family:var(--m);font-size:14px;padding:7px 12px;border:1px solid rgba(255,255,255,.2);border-radius:6px;color:#D4CFC0;background:rgba(255,255,255,.05)}
-.hv{text-align:center}
-.stp{display:inline-block;border:3px solid var(--accent);border-radius:8px;padding:16px 24px;text-align:center;transform:rotate(3deg);background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}.stp i{font-family:var(--d);font-size:40px;font-weight:900;color:var(--accent);font-style:normal;display:block}.stp u{font-family:var(--m);font-size:13px;text-transform:uppercase;color:#D4CFC0;margin-top:4px}
-.cy{font-family:var(--m);font-size:14px;color:var(--accent);margin-top:20px;letter-spacing:.06em}.cy b{color:#fff}
-.cp{text-align:center;font-family:var(--m);font-size:13px;color:#8A8A8A;text-transform:uppercase;margin-top:8px}
-.s{padding:52px 0}.sd{background:var(--c)}
-.hd{max-width:620px;margin-bottom:28px}.hd h2{font-size:clamp(26px,3.5vw,38px);text-transform:uppercase}.hd p{color:var(--ks);font-size:17px;margin-top:10px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.card{background:var(--c);border:1px solid var(--l);border-radius:8px;padding:20px;border-top:4px solid var(--r)}.card .t{font-family:var(--m);font-size:13px;letter-spacing:.08em;color:var(--b);text-transform:uppercase;font-weight:600}.card h3{font-family:var(--d);text-transform:none;font-weight:700;font-size:18px;margin:8px 0 6px}.card p{color:var(--ks);font-size:16px}
-.wm{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}.wm span{font-family:var(--m);font-size:15px;padding:8px 12px;border:1px solid var(--l);border-radius:6px;background:var(--c)}.wm b{color:var(--r)}
-.wc{display:grid;grid-template-columns:1fr 1fr;gap:14px}.wi{background:var(--c);border:1px solid var(--l);border-radius:8px;padding:18px;border-top:4px solid var(--r)}.wi+.wi{border-top-color:var(--b)}.wi h3{font-family:var(--d);font-weight:700;font-size:19px;margin-bottom:10px}.wi li{color:var(--ks);font-size:16px;padding-left:14px;position:relative;margin-bottom:6px}.wi li::before{content:"\2192";position:absolute;left:0;color:var(--r);font-weight:700}
-.rg{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.st{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}.st i{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--r);color:#fff;font-family:var(--m);font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;font-style:normal}.st p{font-size:16px;color:var(--ks);line-height:1.45}.st b{color:var(--k)}
-.qr{text-align:center;margin-top:16px}.qr img{border:2px solid var(--l);border-radius:8px;padding:6px;background:var(--c)}
-.pr{border:2px solid var(--l);background:var(--c);border-radius:8px;overflow:hidden;margin-bottom:16px}.ph{background:var(--k);color:var(--p);padding:16px 20px}.ph .ey{color:var(--accent)}.pa{font-family:var(--d);font-size:38px;font-weight:900;line-height:1}.pa span{font-size:14px;font-weight:400;color:#8A8A8A;font-family:var(--m)}.pb{padding:14px 20px;font-size:15px;color:var(--ks)}.pb b{color:var(--k)}
-form.f{display:flex;flex-direction:column;gap:12px}form.f label{font-family:var(--m);font-size:14px;text-transform:uppercase;color:var(--r);display:block;margin-bottom:4px;font-weight:600}form.f input,form.f select,form.f textarea{font-family:var(--s);font-size:16px;padding:12px;border:1px solid var(--l);border-radius:6px;background:var(--c);color:var(--k);width:100%}form.f input:focus,form.f select:focus,form.f textarea:focus{outline:none;border-color:var(--r)}form.f textarea{resize:vertical;min-height:50px}.rr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ok{display:none;padding:20px;border:2px solid var(--r);border-radius:8px;background:var(--c);text-align:center}.ok h3{font-family:var(--d);font-size:24px;color:var(--r);margin-bottom:6px}.ok p{color:var(--ks);font-size:16px}.ok .sm{color:var(--kf);font-size:14px;margin-top:10px;font-family:var(--m)}
-.wks{display:flex;flex-direction:column}.wk{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--l)}.wk:last-child{border-bottom:1px solid var(--l)}.wk .tg .n{display:block;font-family:var(--m);font-size:14px;color:var(--r);font-weight:600}.wk .tg .v{display:block;font-family:var(--d);text-transform:uppercase;font-size:20px;line-height:1;margin-top:4px}.wk li{color:var(--ks);font-size:15px;padding-left:14px;position:relative;margin-bottom:5px}.wk li::before{content:"\2014";position:absolute;left:0;color:var(--kf)}
-.ic{margin-top:28px;padding:18px;border:1px solid var(--l);background:var(--c);border-radius:8px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ic .it .t{font-family:var(--m);font-size:13px;color:var(--r);text-transform:uppercase;display:block;margin-bottom:4px;font-weight:600}.ic .it p{font-size:14px}
-.fac{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
-.fac img{width:120px;height:auto;border-radius:8px;border:2px solid var(--l)}
-.fac .info h2{font-size:clamp(22px,3vw,30px);text-transform:none}.fac .info .role{color:var(--ks);font-size:15px;margin-top:6px}
-.sp{border:1px solid var(--l);background:var(--c);border-radius:8px;overflow:hidden;margin-top:14px}.sr{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:10px 16px;border-bottom:1px solid var(--ls)}.sr:last-child{border-bottom:none}.sr dt{font-family:var(--m);font-size:13px;text-transform:uppercase;color:var(--r);font-weight:600}.sr dd{font-size:15px}
-.ct{background:var(--k);color:var(--p);padding:52px 0}.ct .ey{color:var(--accent)}.ct h2{color:#fff;font-size:clamp(26px,3.5vw,36px);text-transform:uppercase}.ct p.lead{color:#D4CFC0;font-size:17px;max-width:50ch;margin:10px 0 20px}.cg{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}.ci{border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:14px 16px}.ci .ey{color:rgba(255,255,255,.4)}.ci a{font-family:var(--m);font-size:16px;color:#fff}.ci a:hover{color:var(--accent)}.bd{border-color:rgba(255,255,255,.2);color:#fff}.bd:hover{background:#fff;color:var(--k)}
-footer{background:#0D0D0D;color:#666;padding:18px 0}.ft{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--m);font-size:13px}
-@media(max-width:700px){
-body{font-size:16px}
-.hg,.cards,.wc,.rg,.cg{grid-template-columns:1fr}
-.ic{grid-template-columns:1fr 1fr}
-.fac{grid-template-columns:auto 1fr;gap:14px}.fac img{width:90px}
-.sr{grid-template-columns:1fr;gap:2px}.wk{grid-template-columns:1fr;gap:6px}
-.s{padding:36px 0}.hero{padding:40px 0 32px}
-.nv{display:none}.bu{display:flex}
-.hero h1{font-size:clamp(30px,8vw,48px)}
-.btn{font-size:15px;padding:12px 18px}
-.hd h2{font-size:clamp(24px,6vw,32px)}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+font-family: var(--font-body);
+background: var(--bg);
+color: var(--text);
+line-height: 1.55;
+min-height: 100dvh;
+overflow-x: hidden;
+background-image:
+radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45,212,191,0.08), transparent),
+radial-gradient(ellipse 60% 40% at 50% 100%, rgba(251,191,36,0.06), transparent),
+linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+background-attachment: fixed;
 }
-@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
-</style></head><body>
-<header class="h"><div class="hi"><span class="lo">C3</span>
-<nav class="nv" id="nv"><a href="#workshop">Workshop</a><a href="#program">Program</a><a href="#facilitator">About</a><a href="#register" class="ct">Register</a></nav>
-<button class="bu" id="bu" aria-label="Menu"><span></span><span></span><span></span></button></div></header>
-<section class="hero"><div class="w hg"><div>
-<span class="ey">[ 23 AUG · 9 AM IST · GOOGLE MEET ]</span>
-<h1>Stop guessing.<br>Start <em>prototyping</em> your career.</h1>
-<p class="sb">See the real career space — not singular and imaginary. The world is changing faster than your college can catch up. You can still own your career success — by design, not by chance or luck.</p>
-<div class="ch"><span>What am I competent at?</span><span>Which tools to learn?</span><span>Where to find works that align with my competency?</span></div>
-<div class="fx"><a href="#register" class="btn bp">Register →</a><a href="#workshop" class="btn bg" style="border-color:rgba(255,255,255,.3);color:#fff">What's in it?</a></div></div>
-<div class="hv"><div class="stp"><i>₹250</i><u>23 AUG · 9 AM</u></div>
-<p class="cy"><b>REFLECT</b> → SYNTHESIZE → INVESTIGATE → TEST → EVALUATE</p>
-<p class="cp">The 5-week action cycle</p></div></div></section>
-<section id="why" class="s sd"><div class="w">
-<div class="hd"><span class="ey">[ WHY NOW ]</span><h2>The old playbook is running out of runway.</h2></div>
-<div class="cards">
-<div class="card"><span class="t">The Real Career Space</span><h3>Beyond singular & imaginary</h3><p>Students rarely see the full landscape of real careers. C3 opens up the actual space — roles, paths, and opportunities that exist right now.</p></div>
-<div class="card"><span class="t">The Speed Gap</span><h3>The world moves faster</h3><p>Industry evolves faster than curriculum. By the time a syllabus catches up, the field has already shifted. You need tools to navigate this, not just memorise it.</p></div>
-<div class="card"><span class="t">Your Agency</span><h3>By design, not luck</h3><p>Career success doesn't have to be chance. You can build your own path — refining your inclinations while studying, without disturbing your academics.</p></div>
-</div></div></section>
-<section id="workshop" class="s"><div class="w">
-<div class="hd"><span class="ey">[ THE WORKSHOP ]</span><h2>90 min. Real tools.</h2></div>
-<div class="wm"><span><b>Date:</b> Sun, 23 Aug</span><span><b>Time:</b> 9:00–10:30 AM</span><span><b>Where:</b> Google Meet</span><span><b>Fee:</b> ₹250</span></div>
-<div class="wc"><div class="wi"><h3>What happens</h3><ul><li>See the real career space — not imaginary paths</li><li>Holland Codes — find your areas of inclination</li><li>AEIOU method — how to refine inclinations while studying</li><li>How to create your own path without disturbing studies</li><li>Preview of 5-week program + Q&A</li></ul></div>
-<div class="wi"><h3>What you get</h3><ul><li>Your top 3 Holland traits — identified live</li><li>A started AEIOU map of your experiences</li><li>Clear picture of your real career space</li><li>A way to own your career — by design</li><li>A real answer to whether C3 fits you</li></ul></div></div></div></section>
-<section id="register" class="s sd"><div class="w">
-<div class="hd"><span class="ey">[ SAVE YOUR SEAT ]</span><h2>Pay. Fill the form. Done.</h2></div>
-<div class="rg"><div>
-<div class="st"><i>1</i><p><b>Pay ₹250 via UPI.</b> Tap button or scan QR. UPI ID: <b>8686084844@ybl</b></p></div>
-<div class="st"><i>2</i><p><b>Screenshot the payment.</b> Reference it after submitting.</p></div>
-<div class="st"><i>3</i><p><b>Fill the form →</b> We'll send the Meet link to your email.</p></div>
-<div class="qr"><a href="upi://pay?pa=8686084844@ybl&pn=Nagarjuna%20ASV&am=250&cu=INR&tn=C3%20Workshop" class="btn bp fw">Pay ₹250 Now →</a><br><img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=upi%3A%2F%2Fpay%3Fpa%3D8686084844%40ybl%26pn%3DNagarjuna%26am%3D250%26cu%3DINR" alt="UPI QR" width="140" height="140" style="margin-top:12px"><p class="cp">Or scan to pay</p></div></div><div>
-<div class="pr"><div class="ph"><span class="ey">Workshop Fee</span><div class="pa">₹250 <span>/ 90 min</span></div></div><div class="pb"><b>Sun, 23 Aug · 9:00–10:30 AM IST</b><br>Google Meet · Link sent after registration</div></div>
-<form class="f" id="rf">
-<div><label for="n">Name</label><input type="text" id="n" placeholder="Full name"></div>
-<div><label for="em">Email</label><input type="email" id="em" placeholder="Meet link sent here"></div>
-<div><label for="col">College</label><input type="text" id="col" placeholder="College name"></div>
-<div class="rr"><div><label for="yr">Year</label><select id="yr"><option value="">Select</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option><option>Graduate</option></select></div>
-<div><label for="br">Branch</label><input type="text" id="br" placeholder="e.g. Mechanical"></div></div>
-<div><label for="q">Question? (optional)</label><textarea id="q" placeholder="Anything for Nagarjuna"></textarea></div>
-<button type="button" id="sb" class="btn bp fw">Submit →</button></form>
-<div class="ok" id="ok"><h3>Registration Received!</h3><p>We'll email the Meet link before the workshop.</p><p class="sm">Haven't paid? ₹250 to 8686084844@ybl via UPI.</p></div>
-</div></div></div></section>
-<section id="program" class="s sd"><div class="w">
-<div class="hd"><span class="ey">[ THE 5-WEEK CYCLE ]</span><h2>One loop. Five weeks.</h2><p>Reflect → Synthesize → Investigate → Test → Evaluate.</p></div>
-<div class="wks">
-<div class="wk"><div class="tg"><span class="n">WK.01 · REFLECT</span><span class="v">Mapping Core</span></div><ul><li>Holland Codes — top 3 traits and roles they map to</li><li>AEIOU method — surface hidden skills</li></ul></div>
-<div class="wk"><div class="tg"><span class="n">WK.02 · SYNTHESIZE</span><span class="v">Patterns</span></div><ul><li>Cross-check Holland + AEIOU for patterns</li><li>Draft 3 directions: Probable, Alternate, Imaginary</li></ul></div>
-<div class="wk"><div class="tg"><span class="n">WK.03 · INVESTIGATE</span><span class="v">Research</span></div><ul><li>Approach professionals in each path</li><li>Run "prototype conversations" to test assumptions</li></ul></div>
-<div class="wk"><div class="tg"><span class="n">WK.04 · TEST</span><span class="v">Experiments</span></div><ul><li>Design a small real project using industry tools</li><li>Track energy and focus — data about fit</li></ul></div>
-<div class="wk"><div class="tg"><span class="n">WK.05 · EVALUATE</span><span class="v">Roadmap</span></div><ul><li>Review 5 weeks of evidence about fit</li><li>Leave with a written 4–6 month roadmap</li></ul></div>
+
+.wrap {
+max-width: var(--maxw);
+margin: 0 auto;
+padding: 0 18px 100px;
+}
+
+/* ── Animations ───────────────────────────── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+@keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+@keyframes pulse-soft { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+.reveal { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.12s; }
+.reveal-3 { animation-delay: 0.20s; }
+.reveal-4 { animation-delay: 0.28s; }
+.reveal-5 { animation-delay: 0.36s; }
+.reveal-6 { animation-delay: 0.44s; }
+.reveal-7 { animation-delay: 0.52s; }
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition: none !important; }
+}
+
+/* ── Hero ───────────────────────────── */
+.hero {
+text-align: center;
+padding: 44px 0 28px;
+}
+
+.badge-c3 {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: var(--amber-dim);
+border: 1px solid rgba(251,191,36,0.3);
+border-radius: 100px;
+padding: 6px 16px;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--amber);
+margin-bottom: 18px;
+}
+.badge-c3 .dot {
+width: 6px; height: 6px; border-radius: 50%;
+background: var(--amber);
+animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.hero .pain-line {
+font-size: 14px;
+font-weight: 600;
+color: var(--text-dim);
+max-width: 290px;
+margin: 0 auto 14px;
+line-height: 1.4;
+}
+
+.hero h1 {
+font-family: var(--font-head);
+font-size: 30px;
+font-weight: 700;
+line-height: 1.15;
+letter-spacing: -0.02em;
+margin-bottom: 8px;
+}
+.hero h1 .accent { color: var(--teal); }
+
+.hero .subtitle {
+font-size: 15px;
+color: var(--text-dim);
+max-width: 320px;
+margin: 0 auto;
+line-height: 1.5;
+}
+
+.date-pill {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+margin-top: 22px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+border-radius: 100px;
+padding: 10px 20px;
+font-size: 14px;
+font-weight: 600;
+}
+.date-pill svg { width: 16px; height: 16px; color: var(--teal); flex-shrink: 0; }
+.date-pill .sep { color: var(--text-faint); margin: 0 2px; }
+
+/* ── Section label ───────────────────────────── */
+.sec-label {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: var(--text-faint);
+margin-bottom: 14px;
+}
+.sec-label::after {
+content: '';
+flex: 1;
+height: 1px;
+background: var(--border);
+}
+
+/* ── Details grid ───────────────────────────── */
+.details-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 28px;
+}
+.detail-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-sm);
+padding: 16px 14px;
+text-align: center;
+}
+.detail-card .icon {
+width: 28px; height: 28px;
+margin: 0 auto 8px;
+display: flex; align-items: center; justify-content: center;
+border-radius: 8px;
+background: var(--teal-dim);
+color: var(--teal);
+}
+.detail-card .icon svg { width: 15px; height: 15px; }
+.detail-card .label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 2px; }
+.detail-card .value { font-size: 14px; font-weight: 700; color: var(--text); }
+
+.fee-card {
+grid-column: 1 / -1;
+background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(251,191,36,0.02));
+border: 1px solid rgba(251,191,36,0.25);
+}
+.fee-card .icon { background: var(--amber-dim); color: var(--amber); }
+.fee-card .value { font-size: 22px; color: var(--amber); }
+.fee-card .value small { font-size: 13px; opacity: 0.7; font-weight: 500; }
+
+/* ── What you get ───────────────────────────── */
+.benefits {
+margin-bottom: 28px;
+}
+.benefit-list {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.benefit-item {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-sm);
+padding: 14px 16px;
+}
+.benefit-item .check {
+flex-shrink: 0;
+width: 20px; height: 20px;
+border-radius: 50%;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+margin-top: 1px;
+}
+.benefit-item .check svg { width: 11px; height: 11px; }
+.benefit-item .text { font-size: 14px; line-height: 1.45; }
+.benefit-item .text strong { color: var(--text); font-weight: 600; }
+.benefit-item .text span { color: var(--text-dim); display: block; font-size: 13px; margin-top: 1px; }
+
+/* ── CTA buttons ───────────────────────────── */
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+padding: 16px 20px;
+border-radius: var(--radius-sm);
+font-family: var(--font-body);
+font-size: 16px;
+font-weight: 700;
+text-decoration: none;
+border: none;
+cursor: pointer;
+transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+-webkit-tap-highlight-color: transparent;
+position: relative;
+}
+.btn:active { transform: scale(0.98); }
+.btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ── Registration form ───────────────────────────── */
+.form-section {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+padding: 22px 20px;
+margin-bottom: 28px;
+}
+.form-section h3 {
+font-family: var(--font-head);
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 4px;
+}
+.form-section .form-sub {
+font-size: 13px;
+color: var(--text-dim);
+margin-bottom: 18px;
+}
+
+.field { margin-bottom: 14px; }
+.field label {
+display: block;
+font-size: 12px;
+font-weight: 600;
+color: var(--text-dim);
+margin-bottom: 6px;
+letter-spacing: 0.02em;
+}
+.field label .req { color: var(--rose); }
+.field .hint { font-size: 11px; color: var(--text-faint); margin-top: 6px; line-height: 1.4; }
+
+.field input,
+.field select,
+.field textarea {
+width: 100%;
+padding: 13px 14px;
+background: rgba(0,0,0,0.2);
+border: 1px solid var(--border);
+border-radius: 10px;
+color: var(--text);
+font-family: var(--font-body);
+font-size: 15px;
+transition: border-color 0.2s, box-shadow 0.2s;
+-webkit-appearance: none;
+appearance: none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+outline: none;
+border-color: var(--teal);
+box-shadow: 0 0 0 3px rgba(45,212,191,0.12);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-faint); }
+.field textarea { resize: vertical; min-height: 70px; }
+.field select {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: right 14px center;
+padding-right: 38px;
+}
+.field select option { background: var(--bg-2); color: var(--text); }
+
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.btn-submit {
+background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+color: #0a1628;
+box-shadow: 0 6px 20px rgba(45,212,191,0.2);
+margin-top: 4px;
+}
+.btn-submit:hover { box-shadow: 0 8px 26px rgba(45,212,191,0.3); }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.form-status {
+margin-top: 12px;
+padding: 12px 14px;
+border-radius: 10px;
+font-size: 13px;
+text-align: center;
+display: none;
+}
+.form-status.show { display: block; animation: scaleIn 0.3s ease; }
+.form-status.success {
+background: rgba(45,212,191,0.08);
+border: 1px solid rgba(45,212,191,0.3);
+color: var(--teal);
+}
+.form-status.error {
+background: rgba(251,113,133,0.08);
+border: 1px solid rgba(251,113,133,0.3);
+color: var(--rose);
+}
+
+/* ── Facilitator ───────────────────────────── */
+.facilitator {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+padding: 20px;
+margin-bottom: 28px;
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.facilitator .avatar {
+flex-shrink: 0;
+width: 52px; height: 52px;
+border-radius: 14px;
+background: linear-gradient(135deg, var(--teal-dim), var(--amber-dim));
+border: 1px solid var(--border-strong);
+display: flex; align-items: center; justify-content: center;
+font-family: var(--font-head);
+font-size: 20px;
+font-weight: 700;
+color: var(--teal);
+}
+.facilitator .info h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.facilitator .info p { font-size: 12px; color: var(--text-dim); line-height: 1.4; }
+.facilitator .info .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.facilitator .info .tag {
+font-size: 10px;
+font-weight: 600;
+padding: 2px 8px;
+border-radius: 100px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+color: var(--text-dim);
+}
+
+/* ── Full workshop teaser ───────────────────────────── */
+.full-workshop {
+background: linear-gradient(135deg, rgba(45,212,191,0.06), rgba(251,191,36,0.04));
+border: 1px solid rgba(45,212,191,0.15);
+border-radius: var(--radius);
+padding: 20px;
+margin-bottom: 28px;
+text-align: center;
+}
+.full-workshop .tag-top {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--teal);
+margin-bottom: 8px;
+}
+.full-workshop h3 {
+font-family: var(--font-head);
+font-size: 17px;
+font-weight: 600;
+margin-bottom: 6px;
+}
+.full-workshop p {
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.5;
+}
+.full-workshop .stages {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-top: 14px;
+flex-wrap: wrap;
+}
+.full-workshop .stage {
+font-size: 11px;
+font-weight: 600;
+padding: 4px 10px;
+border-radius: 100px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+color: var(--text-dim);
+}
+
+/* ── Footer ───────────────────────────── */
+.footer {
+text-align: center;
+padding: 20px 0 0;
+border-top: 1px solid var(--border);
+}
+.footer .contact-row {
+display: flex;
+justify-content: center;
+gap: 16px;
+margin-bottom: 12px;
+flex-wrap: wrap;
+}
+.footer .contact-item {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 13px;
+color: var(--text-dim);
+text-decoration: none;
+}
+.footer .contact-item svg { width: 14px; height: 14px; }
+.footer .copyright {
+font-size: 11px;
+color: var(--text-faint);
+}
+
+/* ── Sticky bottom CTA ───────────────────────────── */
+.sticky-cta {
+position: fixed;
+bottom: 0; left: 0; right: 0;
+z-index: 100;
+background: rgba(10,22,40,0.85);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-top: 1px solid var(--border);
+padding: 10px 18px calc(10px + env(safe-area-inset-bottom));
+display: flex;
+gap: 8px;
+}
+.sticky-cta .btn { padding: 14px 16px; font-size: 14px; }
+.sticky-spacer { height: 70px; }
+
+/* ── Count-down ───────────────────────────── */
+.countdown {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-bottom: 6px;
+}
+.countdown .unit {
+text-align: center;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 8px 10px;
+min-width: 56px;
+}
+.countdown .num {
+font-family: var(--font-head);
+font-size: 20px;
+font-weight: 700;
+color: var(--amber);
+line-height: 1;
+}
+.countdown .lbl {
+font-size: 9px;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--text-faint);
+margin-top: 4px;
+}
+
+/* ── Offer banner ───────────────────────────── */
+.offer-banner {
+margin: 20px 0 0;
+background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,113,133,0.08));
+border: 1px solid rgba(251,191,36,0.35);
+border-radius: var(--radius-sm);
+padding: 14px 16px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+.offer-banner .offer-left { text-align: left; }
+.offer-banner .offer-badge {
+display: inline-block;
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--bg);
+background: var(--amber);
+padding: 3px 9px;
+border-radius: 100px;
+margin-bottom: 4px;
+}
+.offer-banner .offer-text { font-size: 11px; color: var(--text-dim); }
+.offer-banner .offer-prices { text-align: right; white-space: nowrap; }
+.offer-banner .price-strike {
+font-size: 15px;
+color: var(--text-faint);
+text-decoration: line-through;
+text-decoration-color: var(--rose);
+margin-right: 6px;
+}
+.offer-banner .price-now {
+font-family: var(--font-head);
+font-size: 26px;
+font-weight: 700;
+color: var(--amber);
+}
+
+/* ── Expert strip ───────────────────────────── */
+.expert-strip {
+display: flex;
+align-items: center;
+gap: 14px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-left: 3px solid var(--teal);
+border-radius: var(--radius-sm);
+padding: 15px 18px;
+margin-bottom: 28px;
+}
+.expert-strip .expert-icon {
+flex-shrink: 0;
+width: 40px; height: 40px;
+border-radius: 10px;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+}
+.expert-strip .expert-icon svg { width: 20px; height: 20px; }
+.expert-strip .expert-text strong {
+display: block;
+font-size: 14px;
+font-weight: 700;
+color: var(--text);
+line-height: 1.35;
+}
+.expert-strip .expert-text span {
+font-size: 12px;
+color: var(--text-dim);
+display: block;
+margin-top: 2px;
+}
+.expert-strip .mnc-tags { display: flex; gap: 5px; margin-top: 6px; }
+.expert-strip .mnc-tag {
+font-size: 10px;
+font-weight: 700;
+padding: 2px 7px;
+border-radius: 4px;
+background: rgba(45,212,191,0.1);
+border: 1px solid rgba(45,212,191,0.2);
+color: var(--teal);
+}
+
+/* ── Founding batch note ───────────────────────────── */
+.founding-note {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+background: var(--teal-dim);
+border: 1px solid rgba(45,212,191,0.22);
+border-radius: var(--radius-sm);
+padding: 12px 14px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.45;
+}
+.founding-note strong { color: var(--teal); font-weight: 700; }
+.founding-note svg { width: 17px; height: 17px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
+
+/* ── Scarcity ───────────────────────────── */
+.scarcity {
+text-align: center;
+font-size: 12px;
+color: var(--rose);
+font-weight: 600;
+margin-top: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+}
+.scarcity .pulse-dot {
+width: 6px; height: 6px;
+border-radius: 50%;
+background: var(--rose);
+animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+/* ── Payment modal ───────────────────── */
+.pay-modal-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(5,10,20,0.72);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 300;
+padding: 20px;
+}
+.pay-modal-backdrop.show { display: flex; animation: fadeIn 0.2s ease; }
+.pay-modal {
+position: relative;
+background: var(--bg-2);
+border: 1px solid var(--border-strong);
+border-radius: var(--radius);
+padding: 28px 24px 22px;
+max-width: 340px;
+width: 100%;
+text-align: center;
+animation: scaleIn 0.25s ease;
+box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+.pay-modal-close {
+position: absolute;
+top: 14px; right: 14px;
+width: 30px; height: 30px;
+border-radius: 50%;
+border: 1px solid var(--border);
+background: var(--surface);
+color: var(--text-dim);
+display: flex; align-items: center; justify-content: center;
+cursor: pointer;
+}
+.pay-modal-close:focus-visible,
+.pay-modal-copy:focus-visible,
+.pay-modal-cta:focus-visible {
+outline: 2px solid var(--teal);
+outline-offset: 2px;
+}
+.pay-modal-close svg { width: 16px; height: 16px; }
+.pay-modal .icon-badge {
+width: 40px; height: 40px;
+border-radius: 10px;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+margin: 0 auto 14px;
+}
+.pay-modal .icon-badge svg { width: 20px; height: 20px; }
+.pay-modal h3 {
+font-family: var(--font-head);
+font-size: 19px;
+font-weight: 700;
+margin-bottom: 8px;
+}
+.pay-modal-sub {
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.5;
+margin-bottom: 18px;
+}
+.pay-modal-qr {
+width: 190px; height: 190px;
+border-radius: 12px;
+background: #fff;
+padding: 10px;
+margin: 0 auto 16px;
+display: block;
+}
+.pay-modal-upi {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 10px 12px;
+margin-bottom: 16px;
+}
+.pay-modal-upi-id {
+font-family: monospace;
+font-size: 13px;
+color: var(--text);
+}
+.pay-modal-copy {
+font-size: 11px;
+font-weight: 700;
+color: var(--teal);
+background: var(--teal-dim);
+border: 1px solid rgba(45,212,191,0.3);
+border-radius: 100px;
+padding: 5px 11px;
+cursor: pointer;
+flex-shrink: 0;
+font-family: var(--font-body);
+}
+.pay-modal-copy:active { transform: scale(0.96); }
+.pay-modal-cta {
+width: 100%;
+padding: 12px 16px;
+border-radius: var(--radius-sm);
+background: var(--surface-2);
+border: 1px solid var(--border-strong);
+color: var(--text);
+font-family: var(--font-body);
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+}
+.pay-modal-hint {
+font-size: 11px;
+color: var(--text-faint);
+margin-top: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+<div class="badge-c3 reveal reveal-1">
+      <span class="dot"></span> RITAM C3 · Competent Career Crafting
 </div>
-<div class="ic"><div class="it"><span class="t">Live</span><p>90-min on Meet</p></div><div class="it"><span class="t">Homework</span><p>Practical tasks</p></div><div class="it"><span class="t">Resources</span><p>Tools & templates</p></div><div class="it"><span class="t">AI Guidance</span><p>Career research</p></div></div>
-</div></section>
-<section id="facilitator" class="s"><div class="w">
-<div class="hd"><span class="ey">[ WHO'S RUNNING THIS ]</span></div>
-<div class="fac">
-<img src="nagarjuna.jpg" alt="Nagarjuna ASV">
+<p class="pain-line reveal reveal-2">Confused between a core job, IT, higher studies, and what your family expects?</p>
+<h1 class="reveal reveal-2">Design Your Career,<br>Don't Just <span class="accent">Find</span> a Job</h1>
+<p class="subtitle reveal reveal-3">A 90-minute weekend web workshop with an engineer who worked at 2 MNCs — giving you the tools to craft your career, not chase one.</p>
+
+<div class="date-pill reveal reveal-3">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+Sunday, 23 Aug 2026 <span class="sep">·</span> 9:00–10:30 AM
+</div>
+
+<div class="offer-banner reveal reveal-4">
+<div class="offer-left">
+<span class="offer-badge">Launch Offer</span>
+<div class="offer-text">Save ₹850 · Limited seats</div>
+</div>
+<div class="offer-prices">
+<span class="price-strike">₹1,100</span>
+<span class="price-now">₹250</span>
+</div>
+</div>
+</section>
+
+<!-- ═══ COUNTDOWN ═══ -->
+<div class="countdown reveal reveal-4" id="countdown">
+<div class="unit"><div class="num" id="cd-days">—</div><div class="lbl">Days</div></div>
+<div class="unit"><div class="num" id="cd-hours">—</div><div class="lbl">Hours</div></div>
+<div class="unit"><div class="num" id="cd-mins">—</div><div class="lbl">Mins</div></div>
+<div class="unit"><div class="num" id="cd-secs">—</div><div class="lbl">Secs</div></div>
+</div>
+
+<!-- ═══ DETAILS GRID ═══ -->
+<section class="reveal reveal-4" style="margin-top: 24px;">
+<div class="sec-label">Workshop Details</div>
+<div class="details-grid">
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<div class="label">Time</div>
+<div class="value">9:00 – 10:30 AM</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+<div class="label">Platform</div>
+<div class="value">Google Meet</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 1 0 7.75"/></svg></div>
+<div class="label">For</div>
+<div class="value">Engineering Students</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+<div class="label">Duration</div>
+<div class="value">90 Minutes</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ WHAT YOU GET ═══ -->
+<section class="benefits reveal reveal-5">
+<div class="sec-label">What You'll Take Away</div>
+<ul class="benefit-list">
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Workshop Material for Career Crafting</strong><span>A practical toolkit you can reuse to map strengths, interests, and career paths — yours to keep.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Discover Your Real Strengths</strong><span>Learn the Holland Codes and AEIOU frameworks used at Stanford's Life Design Lab.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Draft 3 Career Paths</strong><span>Walk away with a Probable, Alternate, and Passion-driven career direction — not vague ideas.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Roadmap to the Full C3 Workshop</strong><span>A teaser of the complete Competent Career Crafting programme — details shared at the end.</span></span>
+</li>
+</ul>
+</section>
+
+<!-- ═══ EXPERT HOOK ═══ -->
+<div class="expert-strip reveal reveal-6">
+<div class="expert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+<div class="expert-text">
+<strong>Guided by an engineer from 2 MNCs</strong>
+<span>Not a theory lecture — learn from someone who lived the corporate career journey.</span>
+<div class="mnc-tags">
+<span class="mnc-tag">SIEMENS</span>
+<span class="mnc-tag">Skoda-Audi</span>
+<span class="mnc-tag">NIT Warangal</span>
+</div>
+</div>
+</div>
+
+<!-- ═══ REGISTRATION FORM ═══ -->
+<section class="form-section reveal reveal-6" id="register">
+<div class="sec-label">Reserve Your Seat</div>
+    <h3>Register & Pay</h3>
+<p class="form-sub">Fill your details below — on confirm, we'll launch your UPI app to complete payment.</p>
+
+<div class="founding-note">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+<span>You'll be part of the <strong>founding batch</strong> of C3 — the first group to go through this exact workshop, at the lowest price it'll ever be.</span>
+</div>
+
+    <div class="scarcity" style="margin-bottom:14px"><span class="pulse-dot"></span> Only 30 slots at launch price, returns to ₹1,100 later</div>
+
+<form id="regForm">
+<div class="field">
+<label>Full Name <span class="req">*</span></label>
+<input type="text" name="Name" id="f-name" placeholder="e.g. Seetha Ram" required>
+</div>
+
+<div class="field">
+<label>WhatsApp Number <span class="req">*</span></label>
+<input type="tel" inputmode="tel" name="WhatsApp" id="f-whatsapp" placeholder="e.g. 9876543210" pattern="[0-9+\s-]{10,15}" required>
+<div class="hint">We'll send workshop reminders and updates here.</div>
+</div>
+
+<div class="field">
+<label>Email Address <span class="req">*</span></label>
+<input type="email" name="Email" id="f-email" placeholder="e.g. seetharam@example.com" required>
+<div class="hint">We'll send your Google Meet link here.</div>
+</div>
+
+<div class="form-grid-2">
+<div class="field">
+<label>College <span class="req">*</span></label>
+<input type="text" name="College" id="f-college" placeholder="e.g. NIT Warangal" required>
+</div>
+<div class="field">
+<label>Year <span class="req">*</span></label>
+<select name="Year" id="f-year" required>
+<option value="" disabled selected>Select</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+<option>Graduated</option>
+</select>
+</div>
+</div>
+
+<div class="field">
+<label>Department / Branch <span class="req">*</span></label>
+<input type="text" name="Department" id="f-dept" placeholder="e.g. Mechanical Engineering" required>
+</div>
+
+<div class="field">
+<label>Any Question for the Facilitator?</label>
+<textarea name="Query" id="f-query" placeholder="Optional — ask anything about career direction, the workshop, or the full C3 programme."></textarea>
+</div>
+
+<button type="submit" class="btn btn-submit" id="submitBtn">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
+Register & Pay
+</button>
+
+<div class="form-status" id="formStatus"></div>
+</form>
+</section>
+
+<!-- ═══ FACILITATOR ═══ -->
+<section class="facilitator reveal reveal-7">
+<div class="avatar">NA</div>
 <div class="info">
-<h2>Nagarjuna ASV</h2>
-<p class="role">Ex-Siemens engineer · NIT Warangal · Certified Career Counselor · 10+ years mentoring 1,000+ students.</p>
-<dl class="sp"><div class="sr"><dt>Engineering</dt><dd>3 yrs Siemens · 1 yr Skoda-Audi</dd></div><div class="sr"><dt>Education</dt><dd>M.Tech, Additive Mfg, NIT Warangal</dd></div><div class="sr"><dt>Certifications</dt><dd>Career Counselor (Govt. of India) · IKS Teacher</dd></div></dl>
-</div></div></div></section>
-<section class="ct"><div class="w"><span class="ey">[ STILL DECIDING? ]</span><h2>Have a question?</h2><p class="lead">Reach out — we're happy to walk you through it.</p>
-<div class="cg"><div class="ci"><span class="ey">Email</span><br><a href="mailto:nagarjuna.asv@gmail.com?subject=C3%20Workshop">nagarjuna.asv@gmail.com</a></div><div class="ci"><span class="ey">WhatsApp</span><br><a href="https://wa.me/918686084844" target="_blank" rel="noopener">+91 86860 84844</a></div></div>
-<div class="fx"><a href="#register" class="btn bp">Register →</a><a href="https://wa.me/918686084844" target="_blank" rel="noopener" class="btn bd">WhatsApp us</a></div></div></section>
-<footer><div class="w ft"><span>C3 — COMPETENT CAREER CRAFTING</span><span>NAGARJUNA ASV · EX-SIEMENS · NIT WARANGAL</span></div></footer>
+<h4>Nagarjuna ASV</h4>
+<p>Worked at 2 MNCs: SIEMENS & Skoda-Audi<br>M.Tech, NIT Warangal · 10+ years mentoring 1,000+ students</p>
+<div class="tags">
+<span class="tag">Ex-SIEMENS</span>
+<span class="tag">Ex-Skoda-Audi</span>
+<span class="tag">NIT Warangal</span>
+<span class="tag">Stanford Life Design</span>
+</div>
+</div>
+</section>
+
+<!-- ═══ FULL WORKSHOP TEASER ═══ -->
+<section class="full-workshop reveal reveal-7">
+<div class="tag-top">After This Session</div>
+<h3>The Full C3 Programme</h3>
+<p>This 90-minute workshop is a launch pad. The complete programme takes you deeper through three stages — and full details will be shared at the end of this session.</p>
+<div class="stages">
+<span class="stage">Stage 1 · Discovery</span>
+<span class="stage">Stage 2 · Investigation</span>
+<span class="stage">Stage 3 · Execution</span>
+</div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer reveal reveal-7">
+<div class="contact-row">
+<a class="contact-item" href="tel:8686084844">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+8686084844
+</a>
+<a class="contact-item" href="mailto:nagarjuna.asv@gmail.com">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+nagarjuna.asv@gmail.com
+</a>
+</div>
+<p class="copyright">© 2026 C3 · Competent Career Crafting. All rights reserved.</p>
+</footer>
+
+<div class="sticky-spacer"></div>
+</div>
+
+<!-- ═══ STICKY BOTTOM CTA ═══ -->
+<div class="sticky-cta">
+<a class="btn btn-submit" href="#register" style="width:100%">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+Register Now
+</a>
+</div>
+
+<!-- ═══ PAYMENT MODAL ═══ -->
+<div class="pay-modal-backdrop" id="payModalBackdrop">
+<div class="pay-modal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+<button class="pay-modal-close" id="payModalClose" aria-label="Close">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</button>
+<div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+<h3 id="payModalTitle">Scan to pay ₹250</h3>
+<p class="pay-modal-sub">You're registered! Open any UPI app — Google Pay, PhonePe, Paytm — and scan this code to complete your payment.</p>
+<img class="pay-modal-qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoCAIAAAD1h/aCAAAIhElEQVR4nO3dwa1stRJAUS5iRgDEQP7BEAMBMG4SwEhbcsn2vWsNv97r7te/2bJ0SuWvz+fzC0Dx6+kPALxHOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIDst/oXfv/jz4nPsd0/f//1n//79Oefft9dr796nWr1vrtevzr1PZ/6ve1S//9y4gAy4QAy4QAy4QAy4QAy4QCyPMex8vpz+5Xbns/vmiN4Zb7glFO/q2m7/l1OHEAmHEAmHEAmHEAmHEAmHEAmHEC2bY5jZXo/wi7fdY/Grr0SK3VOZPrzrJx63+qV/16cOIBMOIBMOIBMOIBMOIBMOIBMOIBsfI7jNtPzGnUuYNzejV3/rl2ff9frT8+bnHqd1zlxAJlwAJlwAJlwAJlwAJlwAJlwANmPm+OY3n9xan/HbfsvpudNqlP7UL4rJw4gEw4gEw4gEw4gEw4gEw4gG5/juO259/T+hek5iF12zXdM7/uopuc1Tn3+2zhxAJlwAJlwAJlwAJlwAJlwAJlwANm2OY7puYNdXtlDcerP73Jq7uO2PSArr/z3suLEAWTCAWTCAWTCAWTCAWTCAWR5juOVfQEr9fNPzyNMm55feGX/yMor389tnDiATDiATDiATDiATDiATDiATDiA7Ovz+aS/sGu/w237CKaft9/2712Zvndml1f2bkx/n6fmTZw4gEw4gEw4gEw4gEw4gEw4gEw4gCzPcay88px8l/rvfX2u4dSczm2ff/r+mun/jnb9Dp04gEw4gEw4gEw4gEw4gEw4gEw4gCzfq3Lq+fxt+wiq2+Y+6vd5au/GKbvu3/munDiATDiATDiATDiATDiATDiATDiALM9xrJy6z2LX83Of8/+dmivZ9een51BOzbmcmh9x4gAy4QAy4QAy4QAy4QAy4QAy4QCybX`
+alt="Scan this QR code with any UPI app to pay ₹250 to Nagarjuna ASV">
+<div class="pay-modal-upi">
+<span class="pay-modal-upi-id">8686084844@ybl</span>
+<button class="pay-modal-copy" id="payModalCopy" type="button">Copy</button>
+</div>
+<button class="pay-modal-cta" id="payModalDone" type="button">Done — I've paid</button>
+<p class="pay-modal-hint">Trouble scanning? WhatsApp 8686084844 and we'll help.</p>
+</div>
+</div>
+
 <script>
-document.getElementById('bu').onclick=function(){var n=document.getElementById('nv'),s=n.style.display==='flex';n.style.display=s?'none':'flex';if(!s){n.style.cssText='position:absolute;top:100%;left:0;right:0;background:var(--p);flex-direction:column;align-items:flex-start;gap:0;border-bottom:2px solid var(--l);padding:0 20px';n.querySelectorAll('a').forEach(function(a){a.style.cssText='width:100%;padding:14px 0;border-top:1px solid var(--ls)'})}};
-var HK='https://script.google.com/macros/s/AKfycbz4k5z8S73oa0-cedGDfzmaB8p7EEH-0UP1w31O5DB6gWcUkKyHIjPTd5c8f0a7qeMLqw/exec';
-var hi=document.createElement('iframe');hi.name='hf';hi.style.display='none';document.body.appendChild(hi);
-document.getElementById('sb').onclick=function(){var d={},id={name:'n',email:'em',college:'col',year:'yr',branch:'br',question:'q'};for(var k in id)d[k]=document.getElementById(id[k]).value.trim();if(!d.name||!d.email||!d.college||!d.year||!d.branch){alert('Please fill in all required fields.');return;}var t=this;t.disabled=true;t.textContent='Submitting...';var f=document.createElement('form');f.method='POST';f.action=HK;f.target='hf';Object.keys(d).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=d[k];f.appendChild(i)});document.body.appendChild(f);f.submit();setTimeout(function(){document.body.removeChild(f);document.getElementById('rf').style.display='none';document.getElementById('ok').style.display='block';t.disabled=false;t.textContent='Submit \u2192'},2500)};
-</script></body></html>
+/* ═══ UPI DEEP LINK ═══ */
+var UPI_CONFIG = {
+pa: '8686084844@ybl',           // UPI ID
+pn: 'Nagarjuna ASV',            // Payee name
+am: '250',                      // Amount
+cu: 'INR',                      // Currency
+tn: 'C3 Workshop Registration'  // Transaction note
+};
+
+function buildUpiLink() {
+var p = UPI_CONFIG;
+return 'upi://pay?pa=' + encodeURIComponent(p.pa)
++ '&pn=' + encodeURIComponent(p.pn)
++ '&am=' + encodeURIComponent(p.am)
++ '&cu=' + encodeURIComponent(p.cu)
++ '&tn=' + encodeURIComponent(p.tn);
+}
+
+var upiUrl = buildUpiLink();
+
+function launchUPIAfterRegister() {
+var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+if (isMobile) {
+window.location.href = upiUrl;
+setTimeout(function() {
+var stillHere = !document.hidden;
+if (stillHere) {
+showPayModal();
+}
+}, 1500);
+} else {
+showPayModal();
+}
+}
+
+/* ═══ PAYMENT MODAL CONTROLS ═══ */
+var payModalBackdrop = document.getElementById('payModalBackdrop');
+
+function showPayModal() {
+payModalBackdrop.classList.add('show');
+}
+function hidePayModal() {
+payModalBackdrop.classList.remove('show');
+}
+
+document.getElementById('payModalClose').addEventListener('click', hidePayModal);
+document.getElementById('payModalDone').addEventListener('click', hidePayModal);
+payModalBackdrop.addEventListener('click', function(e) {
+if (e.target === payModalBackdrop) hidePayModal();
+});
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && payModalBackdrop.classList.contains('show')) hidePayModal();
+});
+document.getElementById('payModalCopy').addEventListener('click', function() {
+var btn = this;
+var reset = btn.textContent;
+if (navigator.clipboard && navigator.clipboard.writeText) {
+navigator.clipboard.writeText(UPI_CONFIG.pa).then(function() {
+btn.textContent = 'Copied!';
+setTimeout(function() { btn.textContent = reset; }, 1500);
+});
+}
+});
+
+/* ═══ COUNTDOWN ═══ */
+var target = new Date('2026-08-23T09:00:00+05:30').getTime();
+function updateCountdown() {
+var now = Date.now();
+var diff = target - now;
+if (diff <= 0) {
+document.getElementById('cd-days').textContent = '0';
+document.getElementById('cd-hours').textContent = '0';
+document.getElementById('cd-mins').textContent = '0';
+document.getElementById('cd-secs').textContent = '0';
+return;
+}
+var d = Math.floor(diff / 86400000);
+var h = Math.floor((diff % 86400000) / 3600000);
+var m = Math.floor((diff % 3600000) / 60000);
+var s = Math.floor((diff % 60000) / 1000);
+document.getElementById('cd-days').textContent = d;
+document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ═══ FORM SUBMISSION → GOOGLE SHEETS ═══
+   Updated Apps Script doPost(e) code:
+
+   function doPost(e) {
+     var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+     var d = JSON.parse(e.postData.contents);
+     sheet.appendRow([
+       new Date(),
+       d.Name, d.WhatsApp, d.College, d.Year, d.Department, d.Email, d.Query
+     ]);
+     return ContentService.createTextOutput(JSON.stringify({status:'ok'}))
+       .setMimeType(ContentService.MimeType.JSON);
+   }
+*/
+var SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwdcLF79AhSDAH3E6W9v9LbJ-NdgeBTkHpZXqj-cOOW-51wGOcM4baOvCRoIpBJKHj3HA/exec';
+
+var form = document.getElementById('regForm');
+var statusEl = document.getElementById('formStatus');
+var submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Validate
+var name = document.getElementById('f-name').value.trim();
+var whatsapp = document.getElementById('f-whatsapp').value.trim();
+var email = document.getElementById('f-email').value.trim();
+var college = document.getElementById('f-college').value.trim();
+var year = document.getElementById('f-year').value;
+var dept = document.getElementById('f-dept').value.trim();
+
+if (!name || !whatsapp || !email || !college || !year || !dept) {
+showStatus('Please fill in all required fields.', 'error');
+return;
+}
+
+var data = {
+Name: name,
+WhatsApp: whatsapp,
+College: college,
+Year: year,
+Department: dept,
+Email: email,
+Query: document.getElementById('f-query').value.trim()
+};
+
+submitBtn.disabled = true;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Submitting...';
+
+if (SHEET_WEBHOOK_URL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+setTimeout(function() {
+showStatus('✓ Registration recorded! Launching UPI payment…', 'success');
+form.reset();
+submitBtn.disabled = false;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg> Register & Pay';
+launchUPIAfterRegister();
+}, 800);
+return;
+}
+
+fetch(SHEET_WEBHOOK_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(data)
+})
+.then(function() {
+showStatus('✓ Registration confirmed! Launching UPI payment…', 'success');
+form.reset();
+launchUPIAfterRegister();
+})
+.catch(function(err) {
+showStatus('Something went wrong. Please try again or WhatsApp 8686084844.', 'error');
+})
+.finally(function() {
+submitBtn.disabled = false;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg> Register & Pay';
+});
+});
+
+function showStatus(msg, type) {
+statusEl.textContent = msg;
+statusEl.className = 'form-status show ' + type;
+}
+</script>
+
+<style>
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+
+</body>
+</html>
