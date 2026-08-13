@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#0a1628">
+<meta name="description" content="RITAM C3 Competent Career Crafting - Weekend Web Workshop for Engineering Students. 23 Aug 2026, Google Meet, 9-10:30 AM.">
+<title>C3 Workshop · Competent Career Crafting · 23 Aug 2026</title>
+
+<!-- ── Social preview (WhatsApp / Instagram / iMessage / Facebook) ──────────
+    IMPORTANT: og:image below points to "og-image.png" sitting next to this
+    file. Upload assets/og-image.png (provided alongside this HTML) to the
+    SAME folder you host index.html in, then replace og:url and og:image
+    below with your real, final, absolute URL — WhatsApp's link preview
+    reads these Open Graph tags, and most crawlers need an absolute
+    (https://...) image URL, not a relative path, to reliably show it.
+ ─────────────────────────────────────────────────────────────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design Your Career, Don't Just Find a Job · C3 Workshop">
+<meta property="og:description" content="Free your Sunday morning for a 90-min live workshop for engineering students. 23 Aug 2026, 9-10:30 AM · Only ₹250, limited seats.">
+<meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN/og-image.png">
+<meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Your Career, Don't Just Find a Job · C3 Workshop">
+<meta name="twitter:description" content="90-min live workshop for engineering students. 23 Aug 2026 · ₹250, limited seats.">
+<meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Google Apps Script webhook setup ──────────────────────────────
+    1. Create a Google Sheet with columns: Timestamp, Name, WhatsApp, College, Year, Department, Query
+    2. Extensions → Apps Script, paste the doPost function (full instructions
+       and code are in the JavaScript near the bottom of this file)
+    3. Deploy → New deployment → Web app → Execute as Me → Anyone access
+    4. Copy the deployment URL and paste it into SHEET_WEBHOOK_URL below
+    Until you do this, the page still works for testing, but no registration
+    data is saved anywhere — see the console.warn() next to SHEET_WEBHOOK_URL.
+ ─────────────────────────────────────────────────────────────────── */
+
+:root {
+--bg: #0a1628;
+--bg-2: #0f1e35;
+--surface: rgba(255,255,255,0.04);
+--surface-2: rgba(255,255,255,0.06);
+--border: rgba(255,255,255,0.09);
+--border-strong: rgba(255,255,255,0.16);
+--text: #f1f5f9;
+--text-dim: #94a3b8;
+--text-faint: #64748b;
+--amber: #fbbf24;
+--amber-dim: rgba(251,191,36,0.12);
+--amber-glow: rgba(251,191,36,0.25);
+--teal: #2dd4bf;
+--teal-dim: rgba(45,212,191,0.10);
+--rose: #fb7185;
+--radius: 18px;
+--radius-sm: 12px;
+--maxw: 460px;
+--font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+--font-head: 'Space Grotesk', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+font-family: var(--font-body);
+background: var(--bg);
+color: var(--text);
+line-height: 1.55;
+min-height: 100dvh;
+overflow-x: hidden;
+background-image:
+radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45,212,191,0.08), transparent),
+radial-gradient(ellipse 60% 40% at 50% 100%, rgba(251,191,36,0.06), transparent),
+linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+background-attachment: fixed;
+}
+
+.wrap {
+max-width: var(--maxw);
+margin: 0 auto;
+padding: 0 18px 100px;
+}
+
+/* ── Animations ───────────────────────────── */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+@keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+@keyframes pulse-soft { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+.reveal { opacity: 0; animation: fadeUp 0.6s ease forwards; }
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.12s; }
+.reveal-3 { animation-delay: 0.20s; }
+.reveal-4 { animation-delay: 0.28s; }
+.reveal-5 { animation-delay: 0.36s; }
+.reveal-6 { animation-delay: 0.44s; }
+.reveal-7 { animation-delay: 0.52s; }
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0ms !important; transition: none !important; }
+}
+
+/* ── Hero ───────────────────────────── */
+.hero {
+text-align: center;
+padding: 44px 0 28px;
+}
+
+.badge-c3 {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: var(--amber-dim);
+border: 1px solid rgba(251,191,36,0.3);
+border-radius: 100px;
+padding: 6px 16px;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--amber);
+margin-bottom: 18px;
+}
+.badge-c3 .dot {
+width: 6px; height: 6px; border-radius: 50%;
+background: var(--amber);
+animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.hero .pain-line {
+font-size: 14px;
+font-weight: 600;
+color: var(--text-dim);
+max-width: 290px;
+margin: 0 auto 14px;
+line-height: 1.4;
+}
+
+.hero h1 {
+font-family: var(--font-head);
+font-size: 30px;
+font-weight: 700;
+line-height: 1.15;
+letter-spacing: -0.02em;
+margin-bottom: 8px;
+}
+.hero h1 .accent { color: var(--teal); }
+
+.hero .subtitle {
+font-size: 15px;
+color: var(--text-dim);
+max-width: 320px;
+margin: 0 auto;
+line-height: 1.5;
+}
+
+.date-pill {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+margin-top: 22px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+border-radius: 100px;
+padding: 10px 20px;
+font-size: 14px;
+font-weight: 600;
+}
+.date-pill svg { width: 16px; height: 16px; color: var(--teal); flex-shrink: 0; }
+.date-pill .sep { color: var(--text-faint); margin: 0 2px; }
+
+/* ── Section label ───────────────────────────── */
+.sec-label {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+color: var(--text-faint);
+margin-bottom: 14px;
+}
+.sec-label::after {
+content: '';
+flex: 1;
+height: 1px;
+background: var(--border);
+}
+
+/* ── Details grid ───────────────────────────── */
+.details-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-bottom: 28px;
+}
+.detail-card {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-sm);
+padding: 16px 14px;
+text-align: center;
+}
+.detail-card .icon {
+width: 28px; height: 28px;
+margin: 0 auto 8px;
+display: flex; align-items: center; justify-content: center;
+border-radius: 8px;
+background: var(--teal-dim);
+color: var(--teal);
+}
+.detail-card .icon svg { width: 15px; height: 15px; }
+.detail-card .label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 2px; }
+.detail-card .value { font-size: 14px; font-weight: 700; color: var(--text); }
+
+.fee-card {
+grid-column: 1 / -1;
+background: linear-gradient(135deg, rgba(251,191,36,0.08), rgba(251,191,36,0.02));
+border: 1px solid rgba(251,191,36,0.25);
+}
+.fee-card .icon { background: var(--amber-dim); color: var(--amber); }
+.fee-card .value { font-size: 22px; color: var(--amber); }
+.fee-card .value small { font-size: 13px; opacity: 0.7; font-weight: 500; }
+
+/* ── What you get ───────────────────────────── */
+.benefits {
+margin-bottom: 28px;
+}
+.benefit-list {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.benefit-item {
+display: flex;
+align-items: flex-start;
+gap: 12px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-sm);
+padding: 14px 16px;
+}
+.benefit-item .check {
+flex-shrink: 0;
+width: 20px; height: 20px;
+border-radius: 50%;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+margin-top: 1px;
+}
+.benefit-item .check svg { width: 11px; height: 11px; }
+.benefit-item .text { font-size: 14px; line-height: 1.45; }
+.benefit-item .text strong { color: var(--text); font-weight: 600; }
+.benefit-item .text span { color: var(--text-dim); display: block; font-size: 13px; margin-top: 1px; }
+
+/* ── CTA buttons ───────────────────────────── */
+.cta-section { margin-bottom: 28px; }
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+width: 100%;
+padding: 16px 20px;
+border-radius: var(--radius-sm);
+font-family: var(--font-body);
+font-size: 16px;
+font-weight: 700;
+text-decoration: none;
+border: none;
+cursor: pointer;
+transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+-webkit-tap-highlight-color: transparent;
+position: relative;
+}
+.btn:active { transform: scale(0.98); }
+.btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.btn-pay {
+background: linear-gradient(135deg, #fbbf24, #f59e0b);
+color: #0a1628;
+box-shadow: 0 8px 24px rgba(251,191,36,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+margin-bottom: 10px;
+}
+.btn-pay:hover { box-shadow: 0 10px 30px rgba(251,191,36,0.35), inset 0 1px 0 rgba(255,255,255,0.2); }
+
+.btn-register {
+background: var(--surface-2);
+color: var(--text);
+border: 1px solid var(--border-strong);
+}
+.btn-register:hover { background: rgba(255,255,255,0.08); }
+
+.pay-hint {
+text-align: center;
+font-size: 12px;
+color: var(--text-faint);
+margin-top: 8px;
+}
+.pay-hint .upi-id {
+font-family: monospace;
+color: var(--text-dim);
+background: var(--surface);
+padding: 1px 6px;
+border-radius: 4px;
+border: 1px solid var(--border);
+}
+
+/* ── Registration form ───────────────────────────── */
+.form-section {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+padding: 22px 20px;
+margin-bottom: 28px;
+}
+.form-section h3 {
+font-family: var(--font-head);
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 4px;
+}
+.form-section .form-sub {
+font-size: 13px;
+color: var(--text-dim);
+margin-bottom: 18px;
+}
+
+.field { margin-bottom: 14px; }
+.field label {
+display: block;
+font-size: 12px;
+font-weight: 600;
+color: var(--text-dim);
+margin-bottom: 6px;
+letter-spacing: 0.02em;
+}
+.field label .req { color: var(--rose); }
+.field .hint { font-size: 11px; color: var(--text-faint); margin-top: 6px; line-height: 1.4; }
+
+.field input,
+.field select,
+.field textarea {
+width: 100%;
+padding: 13px 14px;
+background: rgba(0,0,0,0.2);
+border: 1px solid var(--border);
+border-radius: 10px;
+color: var(--text);
+font-family: var(--font-body);
+font-size: 15px;
+transition: border-color 0.2s, box-shadow 0.2s;
+-webkit-appearance: none;
+appearance: none;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+outline: none;
+border-color: var(--teal);
+box-shadow: 0 0 0 3px rgba(45,212,191,0.12);
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-faint); }
+.field textarea { resize: vertical; min-height: 70px; }
+.field select {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: right 14px center;
+padding-right: 38px;
+}
+.field select option { background: var(--bg-2); color: var(--text); }
+
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.btn-submit {
+background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+color: #0a1628;
+box-shadow: 0 6px 20px rgba(45,212,191,0.2);
+margin-top: 4px;
+}
+.btn-submit:hover { box-shadow: 0 8px 26px rgba(45,212,191,0.3); }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.form-status {
+margin-top: 12px;
+padding: 12px 14px;
+border-radius: 10px;
+font-size: 13px;
+text-align: center;
+display: none;
+}
+.form-status.show { display: block; animation: scaleIn 0.3s ease; }
+.form-status.success {
+background: rgba(45,212,191,0.08);
+border: 1px solid rgba(45,212,191,0.3);
+color: var(--teal);
+}
+.form-status.error {
+background: rgba(251,113,133,0.08);
+border: 1px solid rgba(251,113,133,0.3);
+color: var(--rose);
+}
+
+/* ── Facilitator ───────────────────────────── */
+.facilitator {
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius);
+padding: 20px;
+margin-bottom: 28px;
+display: flex;
+align-items: center;
+gap: 16px;
+}
+.facilitator .avatar {
+flex-shrink: 0;
+width: 52px; height: 52px;
+border-radius: 14px;
+background: linear-gradient(135deg, var(--teal-dim), var(--amber-dim));
+border: 1px solid var(--border-strong);
+display: flex; align-items: center; justify-content: center;
+font-family: var(--font-head);
+font-size: 20px;
+font-weight: 700;
+color: var(--teal);
+}
+.facilitator .info h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+.facilitator .info p { font-size: 12px; color: var(--text-dim); line-height: 1.4; }
+.facilitator .info .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.facilitator .info .tag {
+font-size: 10px;
+font-weight: 600;
+padding: 2px 8px;
+border-radius: 100px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+color: var(--text-dim);
+}
+
+/* ── Full workshop teaser ───────────────────────────── */
+.full-workshop {
+background: linear-gradient(135deg, rgba(45,212,191,0.06), rgba(251,191,36,0.04));
+border: 1px solid rgba(45,212,191,0.15);
+border-radius: var(--radius);
+padding: 20px;
+margin-bottom: 28px;
+text-align: center;
+}
+.full-workshop .tag-top {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--teal);
+margin-bottom: 8px;
+}
+.full-workshop h3 {
+font-family: var(--font-head);
+font-size: 17px;
+font-weight: 600;
+margin-bottom: 6px;
+}
+.full-workshop p {
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.5;
+}
+.full-workshop .stages {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-top: 14px;
+flex-wrap: wrap;
+}
+.full-workshop .stage {
+font-size: 11px;
+font-weight: 600;
+padding: 4px 10px;
+border-radius: 100px;
+background: var(--surface-2);
+border: 1px solid var(--border);
+color: var(--text-dim);
+}
+
+/* ── Footer ───────────────────────────── */
+.footer {
+text-align: center;
+padding: 20px 0 0;
+border-top: 1px solid var(--border);
+}
+.footer .contact-row {
+display: flex;
+justify-content: center;
+gap: 16px;
+margin-bottom: 12px;
+flex-wrap: wrap;
+}
+.footer .contact-item {
+display: flex;
+align-items: center;
+gap: 6px;
+font-size: 13px;
+color: var(--text-dim);
+text-decoration: none;
+}
+.footer .contact-item svg { width: 14px; height: 14px; }
+.footer .copyright {
+font-size: 11px;
+color: var(--text-faint);
+}
+
+/* ── Sticky bottom CTA ───────────────────────────── */
+.sticky-cta {
+position: fixed;
+bottom: 0; left: 0; right: 0;
+z-index: 100;
+background: rgba(10,22,40,0.85);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-top: 1px solid var(--border);
+padding: 10px 18px calc(10px + env(safe-area-inset-bottom));
+display: flex;
+gap: 8px;
+}
+.sticky-cta .btn { padding: 14px 16px; font-size: 14px; }
+.sticky-cta .btn-pay { flex: 1.3; }
+.sticky-cta .btn-register { flex: 1; font-size: 13px; }
+
+/* hidden spacer so content isn't hidden behind sticky CTA */
+.sticky-spacer { height: 70px; }
+
+/* ── Count-down ───────────────────────────── */
+.countdown {
+display: flex;
+justify-content: center;
+gap: 8px;
+margin-bottom: 6px;
+}
+.countdown .unit {
+text-align: center;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 8px 10px;
+min-width: 56px;
+}
+.countdown .num {
+font-family: var(--font-head);
+font-size: 20px;
+font-weight: 700;
+color: var(--amber);
+line-height: 1;
+}
+.countdown .lbl {
+font-size: 9px;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--text-faint);
+margin-top: 4px;
+}
+
+/* ── Offer banner ───────────────────────────── */
+.offer-banner {
+margin: 20px 0 0;
+background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,113,133,0.08));
+border: 1px solid rgba(251,191,36,0.35);
+border-radius: var(--radius-sm);
+padding: 14px 16px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+}
+.offer-banner .offer-left { text-align: left; }
+.offer-banner .offer-badge {
+display: inline-block;
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--bg);
+background: var(--amber);
+padding: 3px 9px;
+border-radius: 100px;
+margin-bottom: 4px;
+}
+.offer-banner .offer-text { font-size: 11px; color: var(--text-dim); }
+.offer-banner .offer-prices { text-align: right; white-space: nowrap; }
+.offer-banner .price-strike {
+font-size: 15px;
+color: var(--text-faint);
+text-decoration: line-through;
+text-decoration-color: var(--rose);
+margin-right: 6px;
+}
+.offer-banner .price-now {
+font-family: var(--font-head);
+font-size: 26px;
+font-weight: 700;
+color: var(--amber);
+}
+
+/* ── Expert strip ───────────────────────────── */
+.expert-strip {
+display: flex;
+align-items: center;
+gap: 14px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-left: 3px solid var(--teal);
+border-radius: var(--radius-sm);
+padding: 15px 18px;
+margin-bottom: 28px;
+}
+.expert-strip .expert-icon {
+flex-shrink: 0;
+width: 40px; height: 40px;
+border-radius: 10px;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+}
+.expert-strip .expert-icon svg { width: 20px; height: 20px; }
+.expert-strip .expert-text strong {
+display: block;
+font-size: 14px;
+font-weight: 700;
+color: var(--text);
+line-height: 1.35;
+}
+.expert-strip .expert-text span {
+font-size: 12px;
+color: var(--text-dim);
+display: block;
+margin-top: 2px;
+}
+.expert-strip .mnc-tags { display: flex; gap: 5px; margin-top: 6px; }
+.expert-strip .mnc-tag {
+font-size: 10px;
+font-weight: 700;
+padding: 2px 7px;
+border-radius: 4px;
+background: rgba(45,212,191,0.1);
+border: 1px solid rgba(45,212,191,0.2);
+color: var(--teal);
+}
+
+/* ── Founding batch note ───────────────────────────── */
+.founding-note {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+background: var(--teal-dim);
+border: 1px solid rgba(45,212,191,0.22);
+border-radius: var(--radius-sm);
+padding: 12px 14px;
+margin-bottom: 16px;
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.45;
+}
+.founding-note strong { color: var(--teal); font-weight: 700; }
+.founding-note svg { width: 17px; height: 17px; color: var(--teal); flex-shrink: 0; margin-top: 1px; }
+
+/* ── Scarcity ───────────────────────────── */
+.scarcity {
+text-align: center;
+font-size: 12px;
+color: var(--rose);
+font-weight: 600;
+margin-top: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 6px;
+}
+.scarcity .pulse-dot {
+width: 6px; height: 6px;
+border-radius: 50%;
+background: var(--rose);
+animation: pulse-soft 1.5s ease-in-out infinite;
+}
+
+/* ── Payment modal (desktop / no UPI app fallback) ───────────────────── */
+.pay-modal-backdrop {
+position: fixed;
+inset: 0;
+background: rgba(5,10,20,0.72);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+display: none;
+align-items: center;
+justify-content: center;
+z-index: 300;
+padding: 20px;
+}
+.pay-modal-backdrop.show { display: flex; animation: fadeIn 0.2s ease; }
+.pay-modal {
+position: relative;
+background: var(--bg-2);
+border: 1px solid var(--border-strong);
+border-radius: var(--radius);
+padding: 28px 24px 22px;
+max-width: 340px;
+width: 100%;
+text-align: center;
+animation: scaleIn 0.25s ease;
+box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+.pay-modal-close {
+position: absolute;
+top: 14px; right: 14px;
+width: 30px; height: 30px;
+border-radius: 50%;
+border: 1px solid var(--border);
+background: var(--surface);
+color: var(--text-dim);
+display: flex; align-items: center; justify-content: center;
+cursor: pointer;
+}
+.pay-modal-close:focus-visible,
+.pay-modal-copy:focus-visible,
+.pay-modal-cta:focus-visible {
+outline: 2px solid var(--teal);
+outline-offset: 2px;
+}
+.pay-modal-close svg { width: 16px; height: 16px; }
+.pay-modal .icon-badge {
+width: 40px; height: 40px;
+border-radius: 10px;
+background: var(--teal-dim);
+color: var(--teal);
+display: flex; align-items: center; justify-content: center;
+margin: 0 auto 14px;
+}
+.pay-modal .icon-badge svg { width: 20px; height: 20px; }
+.pay-modal h3 {
+font-family: var(--font-head);
+font-size: 19px;
+font-weight: 700;
+margin-bottom: 8px;
+}
+.pay-modal-sub {
+font-size: 13px;
+color: var(--text-dim);
+line-height: 1.5;
+margin-bottom: 18px;
+}
+.pay-modal-qr {
+width: 190px; height: 190px;
+border-radius: 12px;
+background: #fff;
+padding: 10px;
+margin: 0 auto 16px;
+display: block;
+}
+.pay-modal-upi {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 10px;
+padding: 10px 12px;
+margin-bottom: 16px;
+}
+.pay-modal-upi-id {
+font-family: monospace;
+font-size: 13px;
+color: var(--text);
+}
+.pay-modal-copy {
+font-size: 11px;
+font-weight: 700;
+color: var(--teal);
+background: var(--teal-dim);
+border: 1px solid rgba(45,212,191,0.3);
+border-radius: 100px;
+padding: 5px 11px;
+cursor: pointer;
+flex-shrink: 0;
+font-family: var(--font-body);
+}
+.pay-modal-copy:active { transform: scale(0.96); }
+.pay-modal-cta {
+width: 100%;
+padding: 12px 16px;
+border-radius: var(--radius-sm);
+background: var(--surface-2);
+border: 1px solid var(--border-strong);
+color: var(--text);
+font-family: var(--font-body);
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+}
+.pay-modal-hint {
+font-size: 11px;
+color: var(--text-faint);
+margin-top: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+<div class="badge-c3 reveal reveal-1">
+      <span class="dot"></span> RITAM C3 · Competent Career Crafting
+</div>
+<p class="pain-line reveal reveal-2">Confused between a core job, IT, higher studies, and what your family expects?</p>
+<h1 class="reveal reveal-2">Design Your Career,<br>Don't Just <span class="accent">Find</span> a Job</h1>
+<p class="subtitle reveal reveal-3">A 90-minute weekend web workshop with an engineer who worked at 2 MNCs — giving you the tools to craft your career, not chase one.</p>
+
+<div class="date-pill reveal reveal-3">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+Sunday, 23 Aug 2026 <span class="sep">·</span> 9:00–10:30 AM
+</div>
+
+<div class="offer-banner reveal reveal-4">
+<div class="offer-left">
+<span class="offer-badge">Launch Offer</span>
+<div class="offer-text">Save ₹850 · Limited seats</div>
+</div>
+<div class="offer-prices">
+<span class="price-strike">₹1,100</span>
+<span class="price-now">₹250</span>
+</div>
+</div>
+</section>
+
+<!-- ═══ COUNTDOWN ═══ -->
+<div class="countdown reveal reveal-4" id="countdown">
+<div class="unit"><div class="num" id="cd-days">—</div><div class="lbl">Days</div></div>
+<div class="unit"><div class="num" id="cd-hours">—</div><div class="lbl">Hours</div></div>
+<div class="unit"><div class="num" id="cd-mins">—</div><div class="lbl">Mins</div></div>
+<div class="unit"><div class="num" id="cd-secs">—</div><div class="lbl">Secs</div></div>
+</div>
+
+<!-- ═══ DETAILS GRID ═══ -->
+<section class="reveal reveal-4" style="margin-top: 24px;">
+<div class="sec-label">Workshop Details</div>
+<div class="details-grid">
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<div class="label">Time</div>
+<div class="value">9:00 – 10:30 AM</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+<div class="label">Platform</div>
+<div class="value">Google Meet</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+<div class="label">For</div>
+<div class="value">Engineering Students</div>
+</div>
+<div class="detail-card">
+<div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+<div class="label">Duration</div>
+<div class="value">90 Minutes</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ WHAT YOU GET ═══ -->
+<section class="benefits reveal reveal-5">
+<div class="sec-label">What You'll Take Away</div>
+<ul class="benefit-list">
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Workshop Material for Career Crafting</strong><span>A practical toolkit you can reuse to map strengths, interests, and career paths — yours to keep.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Discover Your Real Strengths</strong><span>Learn the Holland Codes and AEIOU frameworks used at Stanford's Life Design Lab.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Draft 3 Career Paths</strong><span>Walk away with a Probable, Alternate, and Passion-driven career direction — not vague ideas.</span></span>
+</li>
+<li class="benefit-item">
+<span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg></span>
+<span class="text"><strong>Roadmap to the Full C3 Workshop</strong><span>A teaser of the complete Competent Career Crafting programme — details shared at the end.</span></span>
+</li>
+</ul>
+</section>
+
+<!-- ═══ EXPERT HOOK ═══ -->
+<div class="expert-strip reveal reveal-6">
+<div class="expert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+<div class="expert-text">
+<strong>Guided by an engineer from 2 MNCs</strong>
+<span>Not a theory lecture — learn from someone who lived the corporate career journey.</span>
+<div class="mnc-tags">
+<span class="mnc-tag">SIEMENS</span>
+<span class="mnc-tag">Skoda-Audi</span>
+<span class="mnc-tag">NIT Warangal</span>
+</div>
+</div>
+</div>
+
+<!-- ═══ REGISTRATION FORM ═══ -->
+<section class="form-section reveal reveal-6" id="register">
+<div class="sec-label">Reserve Your Seat</div>
+    <h3>Register & Pay</h3>
+<p class="form-sub">Fill your details below — on confirm, we'll launch your UPI app to complete payment.</p>
+
+<div class="founding-note">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+<span>You'll be part of the <strong>founding batch</strong> of C3 — the first group to go through this exact workshop, at the lowest price it'll ever be.</span>
+</div>
+
+    <div class="scarcity" style="margin-bottom:14px"><span class="pulse-dot"></span> Only 30 slots at launch price, returns to ₹1,100 later</div>
+
+<form id="regForm">
+<div class="field">
+<label>Full Name <span class="req">*</span></label>
+<input type="text" name="Name" id="f-name" placeholder="e.g. Seetha Ram" required>
+</div>
+
+<div class="field">
+<label>WhatsApp Number <span class="req">*</span></label>
+<input type="tel" inputmode="tel" name="WhatsApp" id="f-whatsapp" placeholder="e.g. 9876543210" pattern="[0-9+\s-]{10,15}" required>
+<div class="hint">We'll send your Google Meet link and reminders here — nothing else.</div>
+</div>
+
+<div class="form-grid-2">
+<div class="field">
+<label>College <span class="req">*</span></label>
+<input type="text" name="College" id="f-college" placeholder="e.g. NIT Warangal" required>
+</div>
+<div class="field">
+<label>Year <span class="req">*</span></label>
+<select name="Year" id="f-year" required>
+<option value="" disabled selected>Select</option>
+<option>1st Year</option>
+<option>2nd Year</option>
+<option>3rd Year</option>
+<option>4th Year</option>
+<option>Graduated</option>
+</select>
+</div>
+</div>
+
+<div class="field">
+<label>Department / Branch <span class="req">*</span></label>
+<input type="text" name="Department" id="f-dept" placeholder="e.g. Mechanical Engineering" required>
+</div>
+
+<div class="field">
+<label>Any Question for the Facilitator?</label>
+<textarea name="Query" id="f-query" placeholder="Optional — ask anything about career direction, the workshop, or the full C3 programme."></textarea>
+</div>
+
+<button type="submit" class="btn btn-submit" id="submitBtn">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
+Register & Pay
+</button>
+
+<div class="form-status" id="formStatus"></div>
+</form>
+</section>
+
+<!-- ═══ FACILITATOR ═══ -->
+<section class="facilitator reveal reveal-7">
+<div class="avatar">NA</div>
+<div class="info">
+<h4>Nagarjuna ASV</h4>
+<p>Worked at 2 MNCs: SIEMENS & Skoda-Audi<br>M.Tech, NIT Warangal · 10+ years mentoring 1,000+ students</p>
+<div class="tags">
+<span class="tag">Ex-SIEMENS</span>
+<span class="tag">Ex-Skoda-Audi</span>
+<span class="tag">NIT Warangal</span>
+<span class="tag">Stanford Life Design</span>
+</div>
+</div>
+</section>
+
+<!-- ═══ FULL WORKSHOP TEASER ═══ -->
+<section class="full-workshop reveal reveal-7">
+<div class="tag-top">After This Session</div>
+<h3>The Full C3 Programme</h3>
+<p>This 90-minute workshop is a launch pad. The complete programme takes you deeper through three stages — and full details will be shared at the end of this session.</p>
+<div class="stages">
+<span class="stage">Stage 1 · Discovery</span>
+<span class="stage">Stage 2 · Investigation</span>
+<span class="stage">Stage 3 · Execution</span>
+</div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer reveal reveal-7">
+<div class="contact-row">
+<a class="contact-item" href="tel:8686084844">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+8686084844
+</a>
+<a class="contact-item" href="mailto:nagarjuna.asv@gmail.com">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+nagarjuna.asv@gmail.com
+</a>
+</div>
+<p class="copyright">© 2026 C3 · Competent Career Crafting. All rights reserved.</p>
+</footer>
+
+<div class="sticky-spacer"></div>
+</div>
+
+<!-- ═══ STICKY BOTTOM CTA ═══ -->
+<div class="sticky-cta">
+<a class="btn btn-submit" href="#register" style="width:100%">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+Register Now
+</a>
+</div>
+
+<!-- ═══ PAYMENT MODAL — shown on desktop, and on mobile if no UPI app opens. ═══ -->
+<div class="pay-modal-backdrop" id="payModalBackdrop">
+<div class="pay-modal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+<button class="pay-modal-close" id="payModalClose" aria-label="Close">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</button>
+<div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+<h3 id="payModalTitle">Scan to pay ₹250</h3>
+<p class="pay-modal-sub">You're registered! Open any UPI app — Google Pay, PhonePe, Paytm — and scan this code to complete your payment.</p>
+<img class="pay-modal-qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoCAIAAAD1h/aCAAAIhElEQVR4nO3dwa1stRJAUS5iRgDEQP7BEAMBMG4SwEhbcsn2vWsNv97r7te/2bJ0SuWvz+fzC0Dx6+kPALxHOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIBMOIDst/oXfv/jz4nPsd0/f//1n//79Oefft9dr796nWr1vrtevzr1PZ/6ve1S//9y4gAy4QAy4QAy4QAy4QAy4QCyPMex8vpz+5Xbns/vmiN4Zb7glFO/q2m7/l1OHEAmHEAmHEAmHEAmHEAmHEAmHEC2bY5jZXo/wi7fdY/Grr0SK3VOZPrzrJx63+qV/16cOIBMOIBMOIBMOIBMOIBMOIBMOIBsfI7jNtPzGnUuYNzejV3/rl2ff9frT8+bnHqd1zlxAJlwAJlwAJlwAJlwAJlwAJlwANmPm+OY3n9xan/HbfsvpudNqlP7UL4rJw4gEw4gEw4gEw4gEw4gEw4gG5/juO259/T+hek5iF12zXdM7/uopuc1Tn3+2zhxAJlwAJlwAJlwAJlwAJlwAJlwANm2OY7puYNdXtlDcerP73Jq7uO2PSArr/z3suLEAWTCAWTCAWTCAWTCAWTCAWR5juOVfQEr9fNPzyNMm55feGX/yMor389tnDiATDiATDiATDiATDiATDiATDiA7Ovz+aS/sGu/w237CKaft9/2712Zvndml1f2bkx/n6fmTZw4gEw4gEw4gEw4gEw4gEw4gEw4gCzPcay88px8l/rvfX2u4dSczm2ff/r+mun/jnb9Dp04gEw4gEw4gEw4gEw4gEw4gEw4gCzfq3Lq+fxt+wiq2+Y+6vd5au/GKbvu3/munDiATDiATDiATDiATDiATDiATDiALM9xrJy6z2LX83Of8/+dmivZ9een51BOzbmcmh9x4gAy4QAy4QAy4QAy4QAy4QAy4QCybX`
+alt="Scan this QR code with any UPI app to pay ₹250 to Nagarjuna ASV">
+<div class="pay-modal-upi">
+<span class="pay-modal-upi-id">8686084844@ybl</span>
+<button class="pay-modal-copy" id="payModalCopy" type="button">Copy</button>
+</div>
+<button class="pay-modal-cta" id="payModalDone" type="button">Done — I've paid</button>
+<p class="pay-modal-hint">Trouble scanning? WhatsApp 8686084844 and we'll help.</p>
+</div>
+</div>
+
+<script>
+/* ═══ UPI DEEP LINK ═══ */
+var UPI_CONFIG = {
+pa: '8686084844@ybl',           // UPI ID
+pn: 'Nagarjuna ASV',            // Payee name
+am: '250',                      // Amount
+cu: 'INR',                      // Currency
+tn: 'C3 Workshop Registration'  // Transaction note
+};
+
+function buildUpiLink() {
+var p = UPI_CONFIG;
+return 'upi://pay?pa=' + encodeURIComponent(p.pa)
++ '&pn=' + encodeURIComponent(p.pn)
++ '&am=' + encodeURIComponent(p.am)
++ '&cu=' + encodeURIComponent(p.cu)
++ '&tn=' + encodeURIComponent(p.tn);
+}
+
+var upiUrl = buildUpiLink();
+
+function launchUPIAfterRegister() {
+var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+if (isMobile) {
+window.location.href = upiUrl;
+setTimeout(function() {
+var stillHere = !document.hidden;
+if (stillHere) {
+showPayModal();
+}
+}, 1500);
+} else {
+showPayModal();
+}
+}
+
+/* ═══ PAYMENT MODAL CONTROLS ═══ */
+var payModalBackdrop = document.getElementById('payModalBackdrop');
+
+function showPayModal() {
+payModalBackdrop.classList.add('show');
+}
+function hidePayModal() {
+payModalBackdrop.classList.remove('show');
+}
+
+document.getElementById('payModalClose').addEventListener('click', hidePayModal);
+document.getElementById('payModalDone').addEventListener('click', hidePayModal);
+payModalBackdrop.addEventListener('click', function(e) {
+if (e.target === payModalBackdrop) hidePayModal();
+});
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && payModalBackdrop.classList.contains('show')) hidePayModal();
+});
+document.getElementById('payModalCopy').addEventListener('click', function() {
+var btn = this;
+var reset = btn.textContent;
+if (navigator.clipboard && navigator.clipboard.writeText) {
+navigator.clipboard.writeText(UPI_CONFIG.pa).then(function() {
+btn.textContent = 'Copied!';
+setTimeout(function() { btn.textContent = reset; }, 1500);
+});
+}
+});
+
+/* ═══ COUNTDOWN ═══ */
+var target = new Date('2026-08-23T09:00:00+05:30').getTime();
+function updateCountdown() {
+var now = Date.now();
+var diff = target - now;
+if (diff <= 0) {
+document.getElementById('cd-days').textContent = '0';
+document.getElementById('cd-hours').textContent = '0';
+document.getElementById('cd-mins').textContent = '0';
+document.getElementById('cd-secs').textContent = '0';
+return;
+}
+var d = Math.floor(diff / 86400000);
+var h = Math.floor((diff % 86400000) / 3600000);
+var m = Math.floor((diff % 3600000) / 60000);
+var s = Math.floor((diff % 60000) / 1000);
+document.getElementById('cd-days').textContent = d;
+document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ═══ FORM SUBMISSION → GOOGLE SHEETS ═══ */
+var SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwdcLF79AhSDAH3E6W9v9LbJ-NdgeBTkHpZXqj-cOOW-51wGOcM4baOvCRoIpBJKHj3HA/exec';
+
+var form = document.getElementById('regForm');
+var statusEl = document.getElementById('formStatus');
+var submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Validate
+var name = document.getElementById('f-name').value.trim();
+var whatsapp = document.getElementById('f-whatsapp').value.trim();
+var college = document.getElementById('f-college').value.trim();
+var year = document.getElementById('f-year').value;
+var dept = document.getElementById('f-dept').value.trim();
+
+if (!name || !whatsapp || !college || !year || !dept) {
+showStatus('Please fill in all required fields.', 'error');
+return;
+}
+
+var data = {
+Name: name,
+WhatsApp: whatsapp,
+College: college,
+Year: year,
+Department: dept,
+Query: document.getElementById('f-query').value.trim()
+};
+
+submitBtn.disabled = true;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Submitting...';
+
+if (SHEET_WEBHOOK_URL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+setTimeout(function() {
+showStatus('✓ Registration recorded! Launching UPI payment…', 'success');
+form.reset();
+submitBtn.disabled = false;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg> Confirm & Pay via UPI';
+launchUPIAfterRegister();
+}, 800);
+return;
+}
+
+fetch(SHEET_WEBHOOK_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(data)
+})
+.then(function() {
+showStatus('✓ Registration confirmed! Launching UPI payment…', 'success');
+form.reset();
+launchUPIAfterRegister();
+})
+.catch(function(err) {
+showStatus('Something went wrong. Please try again or WhatsApp 8686084844.', 'error');
+})
+.finally(function() {
+submitBtn.disabled = false;
+submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg> Confirm & Pay via UPI';
+});
+});
+
+function showStatus(msg, type) {
+statusEl.textContent = msg;
+statusEl.className = 'form-status show ' + type;
+}
+</script>
+
+<style>
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+
+</body>
+</html>
